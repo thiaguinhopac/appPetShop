@@ -1,16 +1,43 @@
+import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
-
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { InicioPage } from '../pages/inicio/inicio';
+import { CarrinhoPage } from '../pages/carrinho/carrinho';
+import { CloudTabDefaultPagePage } from '../pages/cloud-tab-default-page/cloud-tab-default-page';
+import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
+import { PagePage } from '../pages/page/page';
+import { LoginPage } from '../pages/login/login';
+import { CadastrarPage } from '../pages/cadastrar/cadastrar';
+import { ProdutoPage } from '../pages/produto/produto';
+import { PagamentoPage } from '../pages/pagamento/pagamento';
+import { CartOPage } from '../pages/cart-o/cart-o';
+import { FinalizarPage } from '../pages/finalizar/finalizar';
+import { BoletoPage } from '../pages/boleto/boleto';
+import { AdicionarCartOPage } from '../pages/adicionar-cart-o/adicionar-cart-o';
+import { PesquisarPage } from '../pages/pesquisar/pesquisar';
+
+
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    InicioPage,
+    CarrinhoPage,
+    CloudTabDefaultPagePage,
+    TabsControllerPage,
+    PagePage,
+    LoginPage,
+    CadastrarPage,
+    ProdutoPage,
+    PagamentoPage,
+    CartOPage,
+    FinalizarPage,
+    BoletoPage,
+    AdicionarCartOPage,
+    PesquisarPage
   ],
   imports: [
     BrowserModule,
@@ -19,7 +46,20 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    InicioPage,
+    CarrinhoPage,
+    CloudTabDefaultPagePage,
+    TabsControllerPage,
+    PagePage,
+    LoginPage,
+    CadastrarPage,
+    ProdutoPage,
+    PagamentoPage,
+    CartOPage,
+    FinalizarPage,
+    BoletoPage,
+    AdicionarCartOPage,
+    PesquisarPage
   ],
   providers: [
     StatusBar,
