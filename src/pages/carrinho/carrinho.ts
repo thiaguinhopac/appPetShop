@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ProdutoPage } from '../produto/produto';
-
+import { PagamentoPage } from '../pagamento/pagamento';
+import { CartOPage } from '../cart-o/cart-o';
+import { FinalizarPage } from '../finalizar/finalizar';
+import { InicioPage } from '../inicio/inicio';
+import { BoletoPage } from '../boleto/boleto';
 
 @Component({
   selector: 'page-carrinho',
@@ -18,5 +22,20 @@ export class CarrinhoPage {
   }goToCarrinho(params){
     if (!params) params = {};
     this.navCtrl.push(CarrinhoPage);
+  }goToPagamento(params){
+    if (!params) params = {};
+    this.navCtrl.push(PagamentoPage);
+  }goToCartO(params){
+    if (!params) params = {};
+    this.navCtrl.push(CartOPage);
+  }goToFinalizar(params){
+    if (!params) params = {};
+    this.navCtrl.push(FinalizarPage);
+  }goToInicio(params){
+    if (!params) params = {};
+    this.navCtrl.push(InicioPage);
+  }goToBoleto(params){
+    if (!params) params = {};
+    this.navCtrl.push(BoletoPage);
   }
 }

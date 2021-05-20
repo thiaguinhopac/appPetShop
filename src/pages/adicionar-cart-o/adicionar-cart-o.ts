@@ -5,6 +5,8 @@ import { FinalizarPage } from '../finalizar/finalizar';
 import { InicioPage } from '../inicio/inicio';
 import { ProdutoPage } from '../produto/produto';
 import { CarrinhoPage } from '../carrinho/carrinho';
+import { PagamentoPage } from '../pagamento/pagamento';
+import { BoletoPage } from '../boleto/boleto';
 
 @Component({
   selector: 'page-adicionar-cart-o',
@@ -30,5 +32,11 @@ export class AdicionarCartOPage {
   }goToCarrinho(params){
     if (!params) params = {};
     this.navCtrl.push(CarrinhoPage);
+  }goToPagamento(params){
+    if (!params) params = {};
+    this.navCtrl.push(PagamentoPage);
+  }goToBoleto(params){
+    if (!params) params = {};
+    this.navCtrl.push(BoletoPage);
   }
 }

@@ -4,6 +4,9 @@ import { FinalizarPage } from '../finalizar/finalizar';
 import { InicioPage } from '../inicio/inicio';
 import { ProdutoPage } from '../produto/produto';
 import { CarrinhoPage } from '../carrinho/carrinho';
+import { PagamentoPage } from '../pagamento/pagamento';
+import { CartOPage } from '../cart-o/cart-o';
+import { BoletoPage } from '../boleto/boleto';
 
 @Component({
   selector: 'page-boleto',
@@ -26,5 +29,14 @@ export class BoletoPage {
   }goToCarrinho(params){
     if (!params) params = {};
     this.navCtrl.push(CarrinhoPage);
+  }goToPagamento(params){
+    if (!params) params = {};
+    this.navCtrl.push(PagamentoPage);
+  }goToCartO(params){
+    if (!params) params = {};
+    this.navCtrl.push(CartOPage);
+  }goToBoleto(params){
+    if (!params) params = {};
+    this.navCtrl.push(BoletoPage);
   }
 }

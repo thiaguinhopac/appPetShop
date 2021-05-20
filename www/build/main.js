@@ -11,6 +11,9 @@ webpackJsonp([0],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__inicio_inicio__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__produto_produto__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__carrinho_carrinho__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pagamento_pagamento__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__cart_o_cart_o__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__boleto_boleto__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -26,12 +29,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 var CartOPage = /** @class */ (function () {
     // this tells the tabs component which Pages
     // should be each tab's root Page
     function CartOPage(navCtrl) {
         this.navCtrl = navCtrl;
     }
+    CartOPage_1 = CartOPage;
     CartOPage.prototype.goToFinalizar = function (params) {
         if (!params)
             params = {};
@@ -52,13 +59,29 @@ var CartOPage = /** @class */ (function () {
             params = {};
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__carrinho_carrinho__["a" /* CarrinhoPage */]);
     };
-    CartOPage = __decorate([
+    CartOPage.prototype.goToPagamento = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__pagamento_pagamento__["a" /* PagamentoPage */]);
+    };
+    CartOPage.prototype.goToCartO = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(CartOPage_1);
+    };
+    CartOPage.prototype.goToBoleto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__boleto_boleto__["a" /* BoletoPage */]);
+    };
+    CartOPage = CartOPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-cart-o',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/cart-o/cart-o.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Cartão\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page10">\n  <img src="assets/img/jBFmrEElSwOrNjZkDtqF_bank_card.jpg" style="display:block;width:70%;height:auto;margin-left:auto;margin-right:auto;" />\n  <div class="spacer" style="width:300px;height:29px;" id="cartO-spacer14"></div>\n  <ion-card id="cartO-card24">\n    <ion-list>\n      <ion-item color="none" on-click="goToFinalizar()" id="cartO-list-item28">\n        Carão de Crédito\n        <ion-note item-right></ion-note>\n        <ion-icon name="card" item-right></ion-icon>\n      </ion-item>\n      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n      </div>\n    </ion-list>\n  </ion-card>\n  <button id="cartO-button6" ion-button clear color="light" block small>\n    <ion-icon name="add-circle"></ion-icon>\n    Adicionar novo cartão\n  </button>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/cart-o/cart-o.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], CartOPage);
     return CartOPage;
+    var CartOPage_1;
 }());
 
 //# sourceMappingURL=cart-o.js.map
@@ -90,6 +113,11 @@ webpackEmptyAsyncContext.id = 113;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__produto_produto__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pagamento_pagamento__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cart_o_cart_o__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__finalizar_finalizar__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__inicio_inicio__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__boleto_boleto__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -99,6 +127,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+
+
+
 
 
 
@@ -119,14 +152,39 @@ var CarrinhoPage = /** @class */ (function () {
             params = {};
         this.navCtrl.push(CarrinhoPage_1);
     };
+    CarrinhoPage.prototype.goToPagamento = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pagamento_pagamento__["a" /* PagamentoPage */]);
+    };
+    CarrinhoPage.prototype.goToCartO = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cart_o_cart_o__["a" /* CartOPage */]);
+    };
+    CarrinhoPage.prototype.goToFinalizar = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__finalizar_finalizar__["a" /* FinalizarPage */]);
+    };
+    CarrinhoPage.prototype.goToInicio = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__inicio_inicio__["a" /* InicioPage */]);
+    };
+    CarrinhoPage.prototype.goToBoleto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__boleto_boleto__["a" /* BoletoPage */]);
+    };
     CarrinhoPage = CarrinhoPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-carrinho',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/carrinho/carrinho.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Carrinho\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page3">\n  <img src="assets/img/knTzFWINROSD2JgCRu5R_Bispg5DQCyOby9869Wvj_carrinho_de_compras.jpg" style="display:block;width:40%;height:auto;margin-left:auto;margin-right:auto;" />\n  <div class="spacer" style="width:300px;height:26px;" id="carrinho-spacer1"></div>\n  <div id="carrinho-container1">\n    <ion-list id="carrinho-list1">\n      <ion-item-sliding>\n        <ion-item color="none" on-click="goToProduto()" id="carrinho-list-item7">\n          <ion-avatar item-left>\n            <img src="assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg" />\n          </ion-avatar>\n          <h2>\n            Ração Pedigree\n          </h2>\n        </ion-item>\n        <ion-item-options side="left">\n          <button ion-button color="light"></button>\n        </ion-item-options>\n      </ion-item-sliding>\n      <ion-item-sliding>\n        <ion-item color="none" on-click="goToProduto()" id="carrinho-list-item18">\n          <ion-avatar item-left>\n            <img src="assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg" />\n          </ion-avatar>\n          <h2>\n            Ração Pedigree\n          </h2>\n        </ion-item>\n        <ion-item-options side="left">\n          <button ion-button color="light"></button>\n        </ion-item-options>\n      </ion-item-sliding>\n      <ion-item-sliding>\n        <ion-item color="none" on-click="goToProduto()" id="carrinho-list-item19">\n          <ion-avatar item-left>\n            <img src="assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg" />\n          </ion-avatar>\n          <h2>\n            Ração Pedigree\n          </h2>\n        </ion-item>\n        <ion-item-options side="left">\n          <button ion-button color="light"></button>\n        </ion-item-options>\n      </ion-item-sliding>\n    </ion-list>\n    <div class="spacer" style="width:300px;height:16px;" id="carrinho-spacer9"></div>\n    <div id="carrinho-markdown8" style="text-align:right;" class="show-list-numbers-and-dots">\n      <p style="color:#000000;">\n        Total: R$ 149.7\n      </p>\n    </div>\n  </div>\n  <div class="spacer" style="width:300px;height:22px;" id="carrinho-spacer10"></div>\n  <div id="carrinho-markdown9" style="text-align:right;" class="show-list-numbers-and-dots">\n    <p style="color:#000000;">\n      Frete : Grátis\n    </p>\n  </div>\n  <div class="spacer" style="width:300px;height:22px;" id="carrinho-spacer12"></div>\n  <button id="carrinho-button1" ion-button color="energized" block>\n    Finalizar compra\n  </button>\n  <div class="spacer" style="height:100px;" id="carrinho-spacer11"></div>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/carrinho/carrinho.html"*/
+            selector: 'page-carrinho',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/carrinho/carrinho.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Carrinho\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page3">\n  <img src="assets/img/knTzFWINROSD2JgCRu5R_Bispg5DQCyOby9869Wvj_carrinho_de_compras.jpg" style="display:block;width:40%;height:auto;margin-left:auto;margin-right:auto;" />\n  <div class="spacer" style="width:300px;height:26px;" id="carrinho-spacer1"></div>\n  <div id="carrinho-container1">\n    <ion-list id="carrinho-list1">\n      <ion-item-sliding>\n        <ion-item color="none" on-click="goToProduto()" id="carrinho-list-item7">\n          <ion-avatar item-left>\n            <img src="assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg" />\n          </ion-avatar>\n          <h2>\n            Ração Pedigree\n          </h2>\n        </ion-item>\n        <ion-item-options side="left">\n          <button ion-button color="light"></button>\n        </ion-item-options>\n      </ion-item-sliding>\n      <ion-item-sliding>\n        <ion-item color="none" on-click="goToProduto()" id="carrinho-list-item18">\n          <ion-avatar item-left>\n            <img src="assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg" />\n          </ion-avatar>\n          <h2>\n            Ração Pedigree\n          </h2>\n        </ion-item>\n        <ion-item-options side="left">\n          <button ion-button color="light"></button>\n        </ion-item-options>\n      </ion-item-sliding>\n      <ion-item-sliding>\n        <ion-item color="none" on-click="goToProduto()" id="carrinho-list-item19">\n          <ion-avatar item-left>\n            <img src="assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg" />\n          </ion-avatar>\n          <h2>\n            Ração Pedigree\n          </h2>\n        </ion-item>\n        <ion-item-options side="left">\n          <button ion-button color="light"></button>\n        </ion-item-options>\n      </ion-item-sliding>\n    </ion-list>\n    <div class="spacer" style="width:300px;height:16px;" id="carrinho-spacer9"></div>\n    <div id="carrinho-markdown8" style="text-align:right;" class="show-list-numbers-and-dots">\n      <p style="color:#000000;">\n        Total: R$ 149.7\n      </p>\n    </div>\n  </div>\n  <div class="spacer" style="width:300px;height:22px;" id="carrinho-spacer10"></div>\n  <div id="carrinho-markdown9" style="text-align:right;" class="show-list-numbers-and-dots">\n    <p style="color:#000000;">\n      Frete : Grátis\n    </p>\n  </div>\n  <div class="spacer" style="width:300px;height:22px;" id="carrinho-spacer12"></div>\n  <button id="carrinho-button1" ion-button color="energized" block on-click="goToPagamento()">\n    Finalizar compra\n  </button>\n  <div class="spacer" style="height:100px;" id="carrinho-spacer11"></div>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/carrinho/carrinho.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object])
     ], CarrinhoPage);
     return CarrinhoPage;
-    var CarrinhoPage_1;
+    var CarrinhoPage_1, _a;
 }());
 
 //# sourceMappingURL=carrinho.js.map
@@ -158,6 +216,11 @@ webpackEmptyAsyncContext.id = 154;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__carrinho_carrinho__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pagamento_pagamento__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cart_o_cart_o__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__finalizar_finalizar__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__inicio_inicio__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__boleto_boleto__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -167,6 +230,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+
+
+
 
 
 
@@ -187,14 +255,39 @@ var ProdutoPage = /** @class */ (function () {
             params = {};
         this.navCtrl.push(ProdutoPage_1);
     };
+    ProdutoPage.prototype.goToPagamento = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pagamento_pagamento__["a" /* PagamentoPage */]);
+    };
+    ProdutoPage.prototype.goToCartO = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cart_o_cart_o__["a" /* CartOPage */]);
+    };
+    ProdutoPage.prototype.goToFinalizar = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__finalizar_finalizar__["a" /* FinalizarPage */]);
+    };
+    ProdutoPage.prototype.goToInicio = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__inicio_inicio__["a" /* InicioPage */]);
+    };
+    ProdutoPage.prototype.goToBoleto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__boleto_boleto__["a" /* BoletoPage */]);
+    };
     ProdutoPage = ProdutoPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-produto',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/produto/produto.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Produto\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page8">\n  <img src="assets/img/f9zxKQJUR6CChhkaZDmp_racao.jpg" style="display:block;width:70%;height:auto;margin-left:auto;margin-right:auto;" />\n  <h1 id="produto-heading1" style="color:#000000;text-align:center;">\n    Ração Pedigree\n  </h1>\n  <h1 id="produto-heading2" style="color:#ABFFAA;text-align:center;">\n    R$ 49,90\n  </h1>\n  <div class="spacer" style="width:300px;height:58px;" id="produto-spacer6"></div>\n  <div id="produto-markdown1" class="show-list-numbers-and-dots">\n    <p style="color:#000000;">\n      descrição:\n    </p>\n  </div>\n  <div id="produto-markdown2" style="text-align:center;" class="show-list-numbers-and-dots">\n    <p style="color:#000000;">\n      Idade: Adulto\n    </p>\n    <p style="color:#000000;">\n      Linha: Premium\n    </p>\n    <p style="color:#000000;">\n      Pet: Cachorros\n    </p>\n    <p style="color:#000000;">\n      Porte de Raça: Pequeno\n    </p>\n    <p style="color:#000000;">\n      Sabor: Carne\n    </p>\n    <p style="color:#000000;">\n      Tipo: Ração seca\n    </p>\n    <p style="color:#000000;">\n      Apresentação: 1kg, 3kg, 10,1kg, 15kg e 20kg\n    </p>\n    <p style="color:#000000;">\n      Indicação: Alimentação diária de cães adultos de pequeno porte\n    </p>\n  </div>\n  <div class="spacer" style="width:300px;height:56px;" id="produto-spacer8"></div>\n  <button id="produto-button5" ion-button color="energized" block on-click="goToCarrinho()">\n    Adicionar ao carrinho\n  </button>\n  <div class="spacer" style="width:300px;height:100px;" id="produto-spacer7"></div>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/produto/produto.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object])
     ], ProdutoPage);
     return ProdutoPage;
-    var ProdutoPage_1;
+    var ProdutoPage_1, _a;
 }());
 
 //# sourceMappingURL=produto.js.map
@@ -257,6 +350,12 @@ var TabsControllerPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inicio_inicio__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__produto_produto__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__carrinho_carrinho__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pagamento_pagamento__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__cart_o_cart_o__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__finalizar_finalizar__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__boleto_boleto__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__cadastrar_cadastrar__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__login_login__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -271,12 +370,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
+
 var LoginPage = /** @class */ (function () {
     // this tells the tabs component which Pages
     // should be each tab's root Page
     function LoginPage(navCtrl) {
         this.navCtrl = navCtrl;
     }
+    LoginPage_1 = LoginPage;
     LoginPage.prototype.goToInicio = function (params) {
         if (!params)
             params = {};
@@ -292,13 +398,44 @@ var LoginPage = /** @class */ (function () {
             params = {};
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__carrinho_carrinho__["a" /* CarrinhoPage */]);
     };
-    LoginPage = __decorate([
+    LoginPage.prototype.goToPagamento = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pagamento_pagamento__["a" /* PagamentoPage */]);
+    };
+    LoginPage.prototype.goToCartO = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__cart_o_cart_o__["a" /* CartOPage */]);
+    };
+    LoginPage.prototype.goToFinalizar = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__finalizar_finalizar__["a" /* FinalizarPage */]);
+    };
+    LoginPage.prototype.goToBoleto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__boleto_boleto__["a" /* BoletoPage */]);
+    };
+    LoginPage.prototype.goToCadastrar = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_9__cadastrar_cadastrar__["a" /* CadastrarPage */]);
+    };
+    LoginPage.prototype.goToLogin = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(LoginPage_1);
+    };
+    LoginPage = LoginPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Login\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page6">\n  <img src="assets/img/V3usKrbpRDqQd43qSuRY_petshop.jpg" style="display:block;width:40%;height:auto;margin-left:auto;margin-right:auto;" />\n  <form id="login-form1">\n    <div class="spacer" style="width:300px;height:35px;" id="login-spacer5"></div>\n    <ion-list id="login-list2">\n      <ion-item id="login-input1">\n        <ion-label stacked>\n          Email\n        </ion-label>\n        <ion-input type="email" placeholder="email@...." name="emailLogin"></ion-input>\n      </ion-item>\n      <ion-item id="login-input2">\n        <ion-label stacked>\n          Senha\n        </ion-label>\n        <ion-input type="password" placeholder="******" name="senhaLogin"></ion-input>\n      </ion-item>\n    </ion-list>\n    <div class="spacer" style="height:40px;" id="login-spacer2"></div>\n    <button id="login-button2" ion-button color="energized" block on-click="goToInicio()">\n      Entrar\n    </button>\n    <button id="login-button3" ion-button clear color="positive" block href-inappbrowser="/signup">\n      Or create an account\n    </button>\n  </form>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/login/login.html"*/
+            selector: 'page-login',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Login\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page6">\n  <img src="assets/img/V3usKrbpRDqQd43qSuRY_petshop.jpg" style="display:block;width:40%;height:auto;margin-left:auto;margin-right:auto;" />\n  <form id="login-form1">\n    <div class="spacer" style="width:300px;height:35px;" id="login-spacer5"></div>\n    <ion-list id="login-list2">\n      <ion-item id="login-input1">\n        <ion-label stacked>\n          Email\n        </ion-label>\n        <ion-input type="email" placeholder="email@...." name="emailLogin"></ion-input>\n      </ion-item>\n      <ion-item id="login-input2">\n        <ion-label stacked>\n          Senha\n        </ion-label>\n        <ion-input type="password" placeholder="******" name="senhaLogin"></ion-input>\n      </ion-item>\n    </ion-list>\n    <div class="spacer" style="height:40px;" id="login-spacer2"></div>\n    <button id="login-button2" ion-button color="energized" block on-click="goToInicio()">\n      Entrar\n    </button>\n    <button id="login-button3" ion-button clear color="positive" block on-click="goToCadastrar()">\n      criar conta\n    </button>\n  </form>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/login/login.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], LoginPage);
     return LoginPage;
+    var LoginPage_1;
 }());
 
 //# sourceMappingURL=login.js.map
@@ -316,6 +453,9 @@ var LoginPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__inicio_inicio__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__produto_produto__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__carrinho_carrinho__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pagamento_pagamento__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__cart_o_cart_o__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__boleto_boleto__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -331,12 +471,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 var BoletoPage = /** @class */ (function () {
     // this tells the tabs component which Pages
     // should be each tab's root Page
     function BoletoPage(navCtrl) {
         this.navCtrl = navCtrl;
     }
+    BoletoPage_1 = BoletoPage;
     BoletoPage.prototype.goToFinalizar = function (params) {
         if (!params)
             params = {};
@@ -357,13 +501,29 @@ var BoletoPage = /** @class */ (function () {
             params = {};
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__carrinho_carrinho__["a" /* CarrinhoPage */]);
     };
-    BoletoPage = __decorate([
+    BoletoPage.prototype.goToPagamento = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__pagamento_pagamento__["a" /* PagamentoPage */]);
+    };
+    BoletoPage.prototype.goToCartO = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__cart_o_cart_o__["a" /* CartOPage */]);
+    };
+    BoletoPage.prototype.goToBoleto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(BoletoPage_1);
+    };
+    BoletoPage = BoletoPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-boleto',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/boleto/boleto.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Boleto\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page12">\n  <img src="assets/img/YNrdwV6rSJuw5BdzsHcR_boleto.jpg" style="display:block;width:70%;height:auto;margin-left:auto;margin-right:auto;" />\n  <div class="spacer" style="height:100px;" id="boleto-spacer18"></div>\n  <div id="boleto-markdown16" class="show-list-numbers-and-dots">\n    <ul>\n      <li>\n        O boleto pode levar o tempo de ate 3 dias uteis para compensar.\n      </li>\n    </ul>\n  </div>\n  <div class="spacer" style="width:300px;height:33px;" id="boleto-spacer19"></div>\n  <button id="boleto-button8" ion-button color="energized" block icon-left on-click="goToFinalizar()">\n    <ion-icon name="download"></ion-icon>\n    Gerar Boleto\n  </button>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/boleto/boleto.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], BoletoPage);
     return BoletoPage;
+    var BoletoPage_1;
 }());
 
 //# sourceMappingURL=boleto.js.map
@@ -410,12 +570,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_conta_conta__ = __webpack_require__(282);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_status_bar__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_splash_screen__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_storage_angular__ = __webpack_require__(285);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -464,7 +626,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: []
-                })
+                }),
+                __WEBPACK_IMPORTED_MODULE_21__ionic_storage_angular__["a" /* IonicStorageModule */].forRoot()
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
             entryComponents: [
@@ -508,6 +671,11 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__produto_produto__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__carrinho_carrinho__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pagamento_pagamento__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cart_o_cart_o__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__finalizar_finalizar__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__inicio_inicio__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__boleto_boleto__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -521,12 +689,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
 var InicioPage = /** @class */ (function () {
     // this tells the tabs component which Pages
     // should be each tab's root Page
     function InicioPage(navCtrl) {
         this.navCtrl = navCtrl;
     }
+    InicioPage_1 = InicioPage;
     InicioPage.prototype.goToProduto = function (params) {
         if (!params)
             params = {};
@@ -537,13 +711,39 @@ var InicioPage = /** @class */ (function () {
             params = {};
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__carrinho_carrinho__["a" /* CarrinhoPage */]);
     };
-    InicioPage = __decorate([
+    InicioPage.prototype.goToPagamento = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__pagamento_pagamento__["a" /* PagamentoPage */]);
+    };
+    InicioPage.prototype.goToCartO = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__cart_o_cart_o__["a" /* CartOPage */]);
+    };
+    InicioPage.prototype.goToFinalizar = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__finalizar_finalizar__["a" /* FinalizarPage */]);
+    };
+    InicioPage.prototype.goToInicio = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(InicioPage_1);
+    };
+    InicioPage.prototype.goToBoleto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__boleto_boleto__["a" /* BoletoPage */]);
+    };
+    InicioPage = InicioPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-inicio',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/inicio/inicio.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Inicio\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page2">\n  <img src="assets/img/Pi672XjRcuQYSxGVYuWF_petshop.jpg" style="display:block;width:30%;height:auto;margin-left:auto;margin-right:auto;" />\n  <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n    <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n  </div>\n  <form id="inicio-form5">\n    <div class="spacer" style="width:300px;height:21px;" id="inicio-spacer23"></div>\n    <ion-searchbar placeholder="Pesquisar" name="" id="inicio-search1"></ion-searchbar>\n  </form>\n  <div class="spacer" style="width:300px;height:39px;" id="inicio-spacer24"></div>\n  <ion-card id="inicio-card29">\n    <ion-list>\n      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n      </div>\n      <h5 id="inicio-heading10" style="color:#000000;">\n        produtos\n      </h5>\n      <ion-card id="inicio-card210">\n        <ion-list>\n          <ion-list id="inicio-list5">\n            <ion-item color="none" on-click="goToProduto()" id="inicio-list-item68">\n              <ion-avatar item-left>\n                <img src="assets/img/LTFfckPfSxqm38OK7eq9_racao.jpg" />\n              </ion-avatar>\n              <h2>\n                Ração Pedigree\n              </h2>\n            </ion-item>\n            <ion-item color="none" on-click="goToProduto()" id="inicio-list-item69">\n              <ion-avatar item-left>\n                <img src="assets/img/LTFfckPfSxqm38OK7eq9_racao.jpg" />\n              </ion-avatar>\n              <h2>\n                Ração Pedigree\n              </h2>\n            </ion-item>\n            <ion-item color="none" on-click="goToProduto()" id="inicio-list-item70">\n              <ion-avatar item-left>\n                <img src="assets/img/LTFfckPfSxqm38OK7eq9_racao.jpg" />\n              </ion-avatar>\n              <h2>\n                Ração Pedigree\n              </h2>\n            </ion-item>\n          </ion-list>\n        </ion-list>\n      </ion-card>\n    </ion-list>\n  </ion-card>\n  <ion-card id="inicio-card27">\n    <ion-list>\n      <h5 id="inicio-heading9" style="color:#000000;">\n        sobre nós\n      </h5>\n      <div id="inicio-markdown21" class="show-list-numbers-and-dots">\n        <p style="color:#000000;">\n          Definimos um tipo elevado de tratamento com seu pet, tanto em produtos quanto em higiene ( tosa, banho, etc. ).\n        </p>\n        <p style="color:#000000;">\n          Criamos uma logistica unica que nos traz a certeza de que seremos o destaque em termo de eficiencia e qualidade.\n        </p>\n        <p style="color:#000000;">\n          Fundada em 2003, cada vez vem ganhando mais forma dentro do mercado, tem se destacado como uma das principais pet shops em questão a satisfação do cliente\n        </p>\n      </div>\n      <img src="assets/img/jKWqyoBEQrarD9AgcljT_loja.jpg" />\n    </ion-list>\n  </ion-card>\n  <ion-card id="inicio-card26">\n    <ion-list>\n      <h5 id="inicio-heading8" style="color:#000000;">\n        Localização\n      </h5>\n      <div id="inicio-markdown20" class="show-list-numbers-and-dots">\n        <p style="color:#000000;">\n          Contamos com diversos filiados em diversas regiões do País, ache a mais perto de você.\n        </p>\n        <ul>\n          <li>\n            1 São Paulo São Paulo\n          </li>\n          <li>\n            2 Rio de Janeiro Rio de Janeiro\n          </li>\n          <li>\n            3 Brasília Distrito Federal\n          </li>\n          <li>\n            4 Salvador Bahia Bahia\n          </li>\n          <li>\n            5 Fortaleza Ceará\n          </li>\n          <li>\n            6 Belo Horizonte Minas Gerais\n          </li>\n          <li>\n            7 Manaus Amazonas\n          </li>\n          <li>\n            8 Curitiba Paraná\n          </li>\n          <li>\n            9 Recife Pernambuco\n          </li>\n          <li>\n            10 Goiânia Goiás\n          </li>\n          <li>\n            11 Belém Pará Pará\n          </li>\n          <li>\n            12 Porto Alegre Rio Grande do Sul\n          </li>\n          <li>\n            13 Guarulhos São Paulo\n          </li>\n        </ul>\n      </div>\n      <div class="spacer" style="width:300px;height:31px;" id="inicio-spacer25"></div>\n      <img src="assets/img/ZCVg3vLTaqHMJsV4IIRV_maps.jpg" />\n      <div class="spacer" style="width:300px;height:42px;" id="inicio-spacer26"></div>\n    </ion-list>\n  </ion-card>\n  <div class="spacer" style="height:100px;" id="inicio-spacer28"></div>\n  <div class="spacer" style="height:100px;" id="inicio-spacer27"></div>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/inicio/inicio.html"*/
+            selector: 'page-inicio',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/inicio/inicio.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Inicio\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page2">\n  <img src="assets/img/Pi672XjRcuQYSxGVYuWF_petshop.jpg" style="display:block;width:30%;height:auto;margin-left:auto;margin-right:auto;" />\n  <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n    <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n  </div>\n  <form id="inicio-form5">\n    <ion-searchbar placeholder="Pesquisar" name="" id="inicio-search1"></ion-searchbar>\n  </form>\n  <ion-card id="inicio-card29">\n    <ion-list>\n      <h5 id="inicio-heading10" style="color:#000000;">\n        produtos\n      </h5>\n      <ion-card id="inicio-card210">\n        <ion-list>\n          <ion-list id="inicio-list5">\n            <ion-item color="none" on-click="goToProduto()" id="inicio-list-item68">\n              <ion-avatar item-left>\n                <img src="assets/img/LTFfckPfSxqm38OK7eq9_racao.jpg" />\n              </ion-avatar>\n              <h2>\n                Ração Pedigree\n              </h2>\n            </ion-item>\n            <ion-item color="none" on-click="goToProduto()" id="inicio-list-item69">\n              <ion-avatar item-left>\n                <img src="assets/img/LTFfckPfSxqm38OK7eq9_racao.jpg" />\n              </ion-avatar>\n              <h2>\n                Ração Pedigree\n              </h2>\n            </ion-item>\n            <ion-item color="none" on-click="goToProduto()" id="inicio-list-item70">\n              <ion-avatar item-left>\n                <img src="assets/img/LTFfckPfSxqm38OK7eq9_racao.jpg" />\n              </ion-avatar>\n              <h2>\n                Ração Pedigree\n              </h2>\n            </ion-item>\n          </ion-list>\n        </ion-list>\n      </ion-card>\n    </ion-list>\n  </ion-card>\n  <ion-card id="inicio-card27">\n    <ion-list>\n      <h5 id="inicio-heading9" style="color:#000000;">\n        sobre nós\n      </h5>\n      <div id="inicio-markdown21" class="show-list-numbers-and-dots">\n        <p style="color:#000000;">\n          Definimos um tipo elevado de tratamento com seu pet, tanto em produtos quanto em higiene ( tosa, banho, etc. ).\n        </p>\n        <p style="color:#000000;">\n          Criamos uma logistica unica que nos traz a certeza de que seremos o destaque em termo de eficiencia e qualidade.\n        </p>\n        <p style="color:#000000;">\n          Fundada em 2003, cada vez vem ganhando mais forma dentro do mercado, tem se destacado como uma das principais pet shops em questão a satisfação do cliente\n        </p>\n      </div>\n      <img src="assets/img/jKWqyoBEQrarD9AgcljT_loja.jpg" />\n    </ion-list>\n  </ion-card>\n  <ion-card id="inicio-card26">\n    <ion-list>\n      <h5 id="inicio-heading8" style="color:#000000;">\n        Localização\n      </h5>\n      <div id="inicio-markdown20" class="show-list-numbers-and-dots">\n        <p style="color:#000000;">\n          Contamos com diversos filiados em diversas regiões do País, ache a mais perto de você.\n        </p>\n        <ul>\n          <li>\n            1 São Paulo São Paulo\n          </li>\n          <li>\n            2 Rio de Janeiro Rio de Janeiro\n          </li>\n          <li>\n            3 Brasília Distrito Federal\n          </li>\n          <li>\n            4 Salvador Bahia Bahia\n          </li>\n          <li>\n            5 Fortaleza Ceará\n          </li>\n          <li>\n            6 Belo Horizonte Minas Gerais\n          </li>\n          <li>\n            7 Manaus Amazonas\n          </li>\n          <li>\n            8 Curitiba Paraná\n          </li>\n          <li>\n            9 Recife Pernambuco\n          </li>\n          <li>\n            10 Goiânia Goiás\n          </li>\n          <li>\n            11 Belém Pará Pará\n          </li>\n          <li>\n            12 Porto Alegre Rio Grande do Sul\n          </li>\n          <li>\n            13 Guarulhos São Paulo\n          </li>\n        </ul>\n      </div>\n      <div class="spacer" style="width:300px;height:31px;" id="inicio-spacer25"></div>\n      <img src="assets/img/ZCVg3vLTaqHMJsV4IIRV_maps.jpg" />\n      <div class="spacer" style="width:300px;height:42px;" id="inicio-spacer26"></div>\n    </ion-list>\n  </ion-card>\n  <div class="spacer" style="height:100px;" id="inicio-spacer28"></div>\n  <div class="spacer" style="height:100px;" id="inicio-spacer27"></div>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/inicio/inicio.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], InicioPage);
     return InicioPage;
+    var InicioPage_1;
 }());
 
 //# sourceMappingURL=inicio.js.map
@@ -644,6 +844,11 @@ var PagePage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__inicio_inicio__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__produto_produto__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__carrinho_carrinho__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pagamento_pagamento__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__cart_o_cart_o__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__finalizar_finalizar__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__boleto_boleto__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__cadastrar_cadastrar__ = __webpack_require__(277);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -659,12 +864,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
 var CadastrarPage = /** @class */ (function () {
     // this tells the tabs component which Pages
     // should be each tab's root Page
     function CadastrarPage(navCtrl) {
         this.navCtrl = navCtrl;
     }
+    CadastrarPage_1 = CadastrarPage;
     CadastrarPage.prototype.goToLogin = function (params) {
         if (!params)
             params = {};
@@ -685,13 +896,39 @@ var CadastrarPage = /** @class */ (function () {
             params = {};
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__carrinho_carrinho__["a" /* CarrinhoPage */]);
     };
-    CadastrarPage = __decorate([
+    CadastrarPage.prototype.goToPagamento = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__pagamento_pagamento__["a" /* PagamentoPage */]);
+    };
+    CadastrarPage.prototype.goToCartO = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__cart_o_cart_o__["a" /* CartOPage */]);
+    };
+    CadastrarPage.prototype.goToFinalizar = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__finalizar_finalizar__["a" /* FinalizarPage */]);
+    };
+    CadastrarPage.prototype.goToBoleto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_9__boleto_boleto__["a" /* BoletoPage */]);
+    };
+    CadastrarPage.prototype.goToCadastrar = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(CadastrarPage_1);
+    };
+    CadastrarPage = CadastrarPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-cadastrar',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/cadastrar/cadastrar.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Cadastrar\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page7">\n  <img src="assets/img/d21uIZVpQbWyskvV7AXZ_petshop.jpg" style="display:block;width:40%;height:auto;margin-left:auto;margin-right:auto;" />\n  <form id="cadastrar-form2">\n    <div class="spacer" style="width:300px;height:18px;" id="cadastrar-spacer3"></div>\n    <ion-list id="cadastrar-list3">\n      <ion-item id="cadastrar-input3">\n        <ion-label stacked>\n          Nome\n        </ion-label>\n        <ion-input type="text" placeholder="Martilda Vamiles" name="nomeCadastro"></ion-input>\n      </ion-item>\n      <ion-item id="cadastrar-input4">\n        <ion-label stacked>\n          Email\n        </ion-label>\n        <ion-input type="email" placeholder="email@.." name="emailCadastro"></ion-input>\n      </ion-item>\n      <ion-item id="cadastrar-input5">\n        <ion-label stacked>\n          Senha\n        </ion-label>\n        <ion-input type="password" placeholder="************" name="senhaCadastro"></ion-input>\n      </ion-item>\n    </ion-list>\n    <div class="spacer" style="width:300px;height:30px;" id="cadastrar-spacer4"></div>\n    <button id="cadastrar-button4" ion-button color="energized" block on-click="goToLogin()">\n      Cadastrar\n    </button>\n  </form>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/cadastrar/cadastrar.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], CadastrarPage);
     return CadastrarPage;
+    var CadastrarPage_1;
 }());
 
 //# sourceMappingURL=cadastrar.js.map
@@ -710,7 +947,8 @@ var CadastrarPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__inicio_inicio__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__produto_produto__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__carrinho_carrinho__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__boleto_boleto__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pagamento_pagamento__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__boleto_boleto__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -728,12 +966,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var PagamentoPage = /** @class */ (function () {
     // this tells the tabs component which Pages
     // should be each tab's root Page
     function PagamentoPage(navCtrl) {
         this.navCtrl = navCtrl;
     }
+    PagamentoPage_1 = PagamentoPage;
     PagamentoPage.prototype.goToCartO = function (params) {
         if (!params)
             params = {};
@@ -759,18 +999,24 @@ var PagamentoPage = /** @class */ (function () {
             params = {};
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__carrinho_carrinho__["a" /* CarrinhoPage */]);
     };
+    PagamentoPage.prototype.goToPagamento = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(PagamentoPage_1);
+    };
     PagamentoPage.prototype.goToBoleto = function (params) {
         if (!params)
             params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__boleto_boleto__["a" /* BoletoPage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__boleto_boleto__["a" /* BoletoPage */]);
     };
-    PagamentoPage = __decorate([
+    PagamentoPage = PagamentoPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-pagamento',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/pagamento/pagamento.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Pagamento\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page9">\n  <img src="assets/img/rqwTTEm7QemfbTTeOAQq_petshop.jpg" style="display:block;width:70%;height:auto;margin-left:auto;margin-right:auto;" />\n  <h4 id="pagamento-heading6" style="color:#000000;font-weight:400;text-align:center;">\n    Selecione o tipo de pagamento\n  </h4>\n  <ion-card id="pagamento-card23">\n    <ion-list>\n      <ion-item color="none" on-click="goToCartO()" id="pagamento-list-item22">\n        <ion-icon name="card" item-left></ion-icon>\n        Débito/Crédito\n      </ion-item>\n      <ion-item color="none" on-click="goToBoleto()" id="pagamento-list-item24">\n        <ion-icon name="document" item-left></ion-icon>\n        Boleto Bancário\n      </ion-item>\n      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n      </div>\n    </ion-list>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/pagamento/pagamento.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], PagamentoPage);
     return PagamentoPage;
+    var PagamentoPage_1;
 }());
 
 //# sourceMappingURL=pagamento.js.map
@@ -789,6 +1035,8 @@ var PagamentoPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__inicio_inicio__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__produto_produto__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__carrinho_carrinho__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pagamento_pagamento__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__boleto_boleto__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -798,6 +1046,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
 
 
 
@@ -836,6 +1086,16 @@ var AdicionarCartOPage = /** @class */ (function () {
             params = {};
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__carrinho_carrinho__["a" /* CarrinhoPage */]);
     };
+    AdicionarCartOPage.prototype.goToPagamento = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__pagamento_pagamento__["a" /* PagamentoPage */]);
+    };
+    AdicionarCartOPage.prototype.goToBoleto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__boleto_boleto__["a" /* BoletoPage */]);
+    };
     AdicionarCartOPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-adicionar-cart-o',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/adicionar-cart-o/adicionar-cart-o.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Adicionar Cartão\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page13">\n  <img src="assets/img/8N48tWGMSKaVZOIMjFqN_cartao.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />\n  <div class="spacer" style="width:300px;height:36px;" id="adicionarCartO-spacer20"></div>\n  <form id="adicionarCartO-form4">\n    <ion-item id="adicionarCartO-input9">\n      <ion-label stacked>\n        Nome impresso no cartão\n      </ion-label>\n      <ion-input type="text" placeholder="Matailda Venila"></ion-input>\n    </ion-item>\n    <ion-item id="adicionarCartO-input10">\n      <ion-label stacked>\n        Numero do cartão\n      </ion-label>\n      <ion-input type="number" placeholder="5505 5055 0055 5500"></ion-input>\n    </ion-item>\n    <ion-item id="adicionarCartO-input11">\n      <ion-label stacked>\n        Validade\n      </ion-label>\n      <ion-input type="date" placeholder=""></ion-input>\n    </ion-item>\n    <div class="spacer" style="width:300px;height:52px;" id="adicionarCartO-spacer21"></div>\n    <button id="adicionarCartO-button10" ion-button color="energized" block on-click="goToCartO()">\n      Salvar cartão\n    </button>\n    <div class="spacer" style="height:100px;" id="adicionarCartO-spacer22"></div>\n  </form>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/adicionar-cart-o/adicionar-cart-o.html"*/
@@ -858,6 +1118,11 @@ var AdicionarCartOPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__produto_produto__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__carrinho_carrinho__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pagamento_pagamento__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cart_o_cart_o__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__finalizar_finalizar__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__inicio_inicio__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__boleto_boleto__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -867,6 +1132,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+
+
+
 
 
 
@@ -886,6 +1156,31 @@ var PesquisarPage = /** @class */ (function () {
         if (!params)
             params = {};
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__carrinho_carrinho__["a" /* CarrinhoPage */]);
+    };
+    PesquisarPage.prototype.goToPagamento = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__pagamento_pagamento__["a" /* PagamentoPage */]);
+    };
+    PesquisarPage.prototype.goToCartO = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__cart_o_cart_o__["a" /* CartOPage */]);
+    };
+    PesquisarPage.prototype.goToFinalizar = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__finalizar_finalizar__["a" /* FinalizarPage */]);
+    };
+    PesquisarPage.prototype.goToInicio = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__inicio_inicio__["a" /* InicioPage */]);
+    };
+    PesquisarPage.prototype.goToBoleto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__boleto_boleto__["a" /* BoletoPage */]);
     };
     PesquisarPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
@@ -911,8 +1206,13 @@ var PesquisarPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__inicio_inicio__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__produto_produto__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__carrinho_carrinho__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__cart_o_cart_o__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__finalizar_finalizar__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pagamento_pagamento__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__cart_o_cart_o__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__finalizar_finalizar__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__boleto_boleto__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__cadastrar_cadastrar__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__conta_conta__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__configura_es_configura_es__ = __webpack_require__(281);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -930,12 +1230,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
 var ConfiguraEsPage = /** @class */ (function () {
     // this tells the tabs component which Pages
     // should be each tab's root Page
     function ConfiguraEsPage(navCtrl) {
         this.navCtrl = navCtrl;
     }
+    ConfiguraEsPage_1 = ConfiguraEsPage;
     ConfiguraEsPage.prototype.goToLogin = function (params) {
         if (!params)
             params = {};
@@ -956,23 +1262,49 @@ var ConfiguraEsPage = /** @class */ (function () {
             params = {};
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__carrinho_carrinho__["a" /* CarrinhoPage */]);
     };
+    ConfiguraEsPage.prototype.goToPagamento = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__pagamento_pagamento__["a" /* PagamentoPage */]);
+    };
     ConfiguraEsPage.prototype.goToCartO = function (params) {
         if (!params)
             params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__cart_o_cart_o__["a" /* CartOPage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__cart_o_cart_o__["a" /* CartOPage */]);
     };
     ConfiguraEsPage.prototype.goToFinalizar = function (params) {
         if (!params)
             params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__finalizar_finalizar__["a" /* FinalizarPage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__finalizar_finalizar__["a" /* FinalizarPage */]);
     };
-    ConfiguraEsPage = __decorate([
+    ConfiguraEsPage.prototype.goToBoleto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_9__boleto_boleto__["a" /* BoletoPage */]);
+    };
+    ConfiguraEsPage.prototype.goToCadastrar = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_10__cadastrar_cadastrar__["a" /* CadastrarPage */]);
+    };
+    ConfiguraEsPage.prototype.goToConta = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_11__conta_conta__["a" /* ContaPage */]);
+    };
+    ConfiguraEsPage.prototype.goToConfiguraEs = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(ConfiguraEsPage_1);
+    };
+    ConfiguraEsPage = ConfiguraEsPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-configura-es',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/configura-es/configura-es.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Configurações\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page4">\n  <img src="assets/img/ru13jJrgSlyk1rqVTgVu_petshop.jpg" style="display:block;width:40%;height:auto;margin-left:auto;margin-right:auto;" />\n  <div class="spacer" style="width:300px;height:26px;" id="configuraEs-spacer13"></div>\n  <ion-card id="configuraEs-card21">\n    <ion-list>\n      <ion-item color="none" id="configuraEs-list-item85">\n        <ion-icon name="person" item-left></ion-icon>\n        Conta\n      </ion-item>\n      <ion-item color="none" on-click="goToCartO()" id="configuraEs-list-item87">\n        <ion-icon name="card" item-left></ion-icon>\n        Cartões\n      </ion-item>\n      <ion-item color="none" on-click="goToLogin()" id="configuraEs-list-item88">\n        <ion-icon name="exit" item-left></ion-icon>\n        Sair\n      </ion-item>\n      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n      </div>\n    </ion-list>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/configura-es/configura-es.html"*/
+            selector: 'page-configura-es',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/configura-es/configura-es.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Configurações\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page4">\n  <img src="assets/img/ru13jJrgSlyk1rqVTgVu_petshop.jpg" style="display:block;width:40%;height:auto;margin-left:auto;margin-right:auto;" />\n  <div class="spacer" style="width:300px;height:26px;" id="configuraEs-spacer13"></div>\n  <ion-card id="configuraEs-card21">\n    <ion-list>\n      <ion-item color="none" on-click="goToConta()" id="configuraEs-list-item85">\n        <ion-icon name="person" item-left></ion-icon>\n        Conta\n      </ion-item>\n      <ion-item color="none" on-click="goToCartO()" id="configuraEs-list-item87">\n        <ion-icon name="card" item-left></ion-icon>\n        Cartões\n      </ion-item>\n      <ion-item color="none" on-click="goToLogin()" id="configuraEs-list-item88">\n        <ion-icon name="exit" item-left></ion-icon>\n        Sair\n      </ion-item>\n      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n      </div>\n    </ion-list>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/configura-es/configura-es.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], ConfiguraEsPage);
     return ConfiguraEsPage;
+    var ConfiguraEsPage_1;
 }());
 
 //# sourceMappingURL=configura-es.js.map
@@ -991,8 +1323,12 @@ var ConfiguraEsPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__inicio_inicio__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__produto_produto__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__carrinho_carrinho__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__cart_o_cart_o__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__finalizar_finalizar__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pagamento_pagamento__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__cart_o_cart_o__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__finalizar_finalizar__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__boleto_boleto__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__cadastrar_cadastrar__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__conta_conta__ = __webpack_require__(282);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1011,12 +1347,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
 var ContaPage = /** @class */ (function () {
     // this tells the tabs component which Pages
     // should be each tab's root Page
     function ContaPage(navCtrl) {
         this.navCtrl = navCtrl;
     }
+    ContaPage_1 = ContaPage;
     ContaPage.prototype.goToConfiguraEs = function (params) {
         if (!params)
             params = {};
@@ -1042,23 +1383,44 @@ var ContaPage = /** @class */ (function () {
             params = {};
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__carrinho_carrinho__["a" /* CarrinhoPage */]);
     };
+    ContaPage.prototype.goToPagamento = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__pagamento_pagamento__["a" /* PagamentoPage */]);
+    };
     ContaPage.prototype.goToCartO = function (params) {
         if (!params)
             params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__cart_o_cart_o__["a" /* CartOPage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__cart_o_cart_o__["a" /* CartOPage */]);
     };
     ContaPage.prototype.goToFinalizar = function (params) {
         if (!params)
             params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__finalizar_finalizar__["a" /* FinalizarPage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_9__finalizar_finalizar__["a" /* FinalizarPage */]);
     };
-    ContaPage = __decorate([
+    ContaPage.prototype.goToBoleto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_10__boleto_boleto__["a" /* BoletoPage */]);
+    };
+    ContaPage.prototype.goToCadastrar = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_11__cadastrar_cadastrar__["a" /* CadastrarPage */]);
+    };
+    ContaPage.prototype.goToConta = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(ContaPage_1);
+    };
+    ContaPage = ContaPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-conta',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/conta/conta.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Conta\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page15">\n  <div class="spacer" style="width:300px;height:19px;" id="conta-spacer30"></div>\n  <img src="assets/img/pOQKYujfS2WBxYvlBmkt_person.jpg" style="display:block;width:50%;height:auto;margin-left:auto;margin-right:auto;" />\n  <div class="spacer" style="width:300px;height:50px;" id="conta-spacer29"></div>\n  <ion-list id="conta-list8">\n    <ion-item id="conta-input13">\n      <ion-label>\n        Nome\n      </ion-label>\n      <ion-input type="text" placeholder="Maria Dolores"></ion-input>\n    </ion-item>\n    <ion-item id="conta-input14">\n      <ion-label>\n        Endereço\n      </ion-label>\n      <ion-input type="text" placeholder="Rua Afonso Ricardo. 233"></ion-input>\n    </ion-item>\n    <ion-item id="conta-input15">\n      <ion-label>\n        Nascimento\n      </ion-label>\n      <ion-input type="date" placeholder="11/03/1988"></ion-input>\n    </ion-item>\n  </ion-list>\n  <button id="conta-button9" ion-button color="positive" block on-click="goToConfiguraEs()">\n    Salvar\n  </button>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/conta/conta.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], ContaPage);
     return ContaPage;
+    var ContaPage_1;
 }());
 
 //# sourceMappingURL=conta.js.map
@@ -1075,6 +1437,10 @@ var ContaPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inicio_inicio__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__produto_produto__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__carrinho_carrinho__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pagamento_pagamento__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__cart_o_cart_o__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__finalizar_finalizar__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__boleto_boleto__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1089,12 +1455,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
 var FinalizarPage = /** @class */ (function () {
     // this tells the tabs component which Pages
     // should be each tab's root Page
     function FinalizarPage(navCtrl) {
         this.navCtrl = navCtrl;
     }
+    FinalizarPage_1 = FinalizarPage;
     FinalizarPage.prototype.goToInicio = function (params) {
         if (!params)
             params = {};
@@ -1110,13 +1481,34 @@ var FinalizarPage = /** @class */ (function () {
             params = {};
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__carrinho_carrinho__["a" /* CarrinhoPage */]);
     };
-    FinalizarPage = __decorate([
+    FinalizarPage.prototype.goToPagamento = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pagamento_pagamento__["a" /* PagamentoPage */]);
+    };
+    FinalizarPage.prototype.goToCartO = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__cart_o_cart_o__["a" /* CartOPage */]);
+    };
+    FinalizarPage.prototype.goToFinalizar = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(FinalizarPage_1);
+    };
+    FinalizarPage.prototype.goToBoleto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__boleto_boleto__["a" /* BoletoPage */]);
+    };
+    FinalizarPage = FinalizarPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-finalizar',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/finalizar/finalizar.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Finalizar\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page11">\n  <div class="spacer" style="width:300px;height:61px;" id="finalizar-spacer16"></div>\n  <img src="assets/img/B1qQ8ceQH23CMeoBTddZ_check.jpg" style="display:block;width:30%;height:auto;margin-left:auto;margin-right:auto;" />\n  <div class="spacer" style="width:300px;height:28px;" id="finalizar-spacer15"></div>\n  <h4 id="finalizar-heading7" style="color:#000000;font-weight:400;text-align:center;">\n    Compra realizada com sucesso\n  </h4>\n  <div id="finalizar-markdown15" style="text-align:center;" class="show-list-numbers-and-dots">\n    <p style="color:#000000;">\n      Obrigado por comprar conosco! Você pode acompanhar seu pedido nesse link https://linkDoRastreio.com.br ou falar com a gente através desse email suporte@petshop.com.br\n    </p>\n  </div>\n  <div class="spacer" style="width:300px;height:55px;" id="finalizar-spacer17"></div>\n  <button id="finalizar-button7" ion-button color="energized" block on-click="goToInicio()">\n    Inicio\n  </button>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/finalizar/finalizar.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], FinalizarPage);
     return FinalizarPage;
+    var FinalizarPage_1;
 }());
 
 //# sourceMappingURL=finalizar.js.map
