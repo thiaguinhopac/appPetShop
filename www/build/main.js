@@ -210,7 +210,7 @@ var ProdutoPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inicio_inicio__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__carrinho_carrinho__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cloud_tab_default_page_cloud_tab_default_page__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__configura_es_configura_es__ = __webpack_require__(281);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -232,11 +232,11 @@ var TabsControllerPage = /** @class */ (function () {
         // should be each tab's root Page
         this.tab1Root = __WEBPACK_IMPORTED_MODULE_2__inicio_inicio__["a" /* InicioPage */];
         this.tab2Root = __WEBPACK_IMPORTED_MODULE_3__carrinho_carrinho__["a" /* CarrinhoPage */];
-        this.tab3Root = __WEBPACK_IMPORTED_MODULE_4__cloud_tab_default_page_cloud_tab_default_page__["a" /* CloudTabDefaultPagePage */];
+        this.tab3Root = __WEBPACK_IMPORTED_MODULE_4__configura_es_configura_es__["a" /* ConfiguraEsPage */];
     }
     TabsControllerPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tabs-controller',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/tabs-controller/tabs-controller.html"*/'<ion-tabs id="tabsController-tabs1">\n  <ion-tab [root]="tab1Root" tabTitle="Inicio" tabIcon="home" id="tabsController-tab1"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Carrinho" tabIcon="cart" id="tabsController-tab2"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Conta" tabIcon="person" id="tabsController-tab3"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/tabs-controller/tabs-controller.html"*/
+            selector: 'page-tabs-controller',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/tabs-controller/tabs-controller.html"*/'<ion-tabs id="tabsController-tabs1">\n  <ion-tab [root]="tab1Root" tabTitle="Inicio" tabIcon="home" id="tabsController-tab1"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Carrinho" tabIcon="cart" id="tabsController-tab2"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Configurações" tabIcon="construct" id="tabsController-tab3"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/tabs-controller/tabs-controller.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], TabsControllerPage);
@@ -244,43 +244,6 @@ var TabsControllerPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=tabs-controller.js.map
-
-/***/ }),
-
-/***/ 199:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CloudTabDefaultPagePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var CloudTabDefaultPagePage = /** @class */ (function () {
-    // this tells the tabs component which Pages
-    // should be each tab's root Page
-    function CloudTabDefaultPagePage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    CloudTabDefaultPagePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cloud-tab-default-page',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/cloud-tab-default-page/cloud-tab-default-page.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Cloud Tab Default Page\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page4"></ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/cloud-tab-default-page/cloud-tab-default-page.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
-    ], CloudTabDefaultPagePage);
-    return CloudTabDefaultPagePage;
-}());
-
-//# sourceMappingURL=cloud-tab-default-page.js.map
 
 /***/ }),
 
@@ -432,7 +395,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(268);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_inicio_inicio__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_carrinho_carrinho__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_cloud_tab_default_page_cloud_tab_default_page__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_configura_es_configura_es__ = __webpack_require__(281);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_controller_tabs_controller__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_page_page__ = __webpack_require__(276);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login__ = __webpack_require__(200);
@@ -444,14 +407,16 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_boleto_boleto__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_adicionar_cart_o_adicionar_cart_o__ = __webpack_require__(279);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_pesquisar_pesquisar__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_status_bar__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_splash_screen__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_conta_conta__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_status_bar__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_splash_screen__ = __webpack_require__(197);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -481,7 +446,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_4__pages_inicio_inicio__["a" /* InicioPage */],
                 __WEBPACK_IMPORTED_MODULE_5__pages_carrinho_carrinho__["a" /* CarrinhoPage */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_cloud_tab_default_page_cloud_tab_default_page__["a" /* CloudTabDefaultPagePage */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_configura_es_configura_es__["a" /* ConfiguraEsPage */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_tabs_controller_tabs_controller__["a" /* TabsControllerPage */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_page_page__["a" /* PagePage */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_login_login__["a" /* LoginPage */],
@@ -492,7 +457,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_14__pages_finalizar_finalizar__["a" /* FinalizarPage */],
                 __WEBPACK_IMPORTED_MODULE_15__pages_boleto_boleto__["a" /* BoletoPage */],
                 __WEBPACK_IMPORTED_MODULE_16__pages_adicionar_cart_o_adicionar_cart_o__["a" /* AdicionarCartOPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_pesquisar_pesquisar__["a" /* PesquisarPage */]
+                __WEBPACK_IMPORTED_MODULE_17__pages_pesquisar_pesquisar__["a" /* PesquisarPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_conta_conta__["a" /* ContaPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
@@ -505,7 +471,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_4__pages_inicio_inicio__["a" /* InicioPage */],
                 __WEBPACK_IMPORTED_MODULE_5__pages_carrinho_carrinho__["a" /* CarrinhoPage */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_cloud_tab_default_page_cloud_tab_default_page__["a" /* CloudTabDefaultPagePage */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_configura_es_configura_es__["a" /* ConfiguraEsPage */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_tabs_controller_tabs_controller__["a" /* TabsControllerPage */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_page_page__["a" /* PagePage */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_login_login__["a" /* LoginPage */],
@@ -516,11 +482,12 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_14__pages_finalizar_finalizar__["a" /* FinalizarPage */],
                 __WEBPACK_IMPORTED_MODULE_15__pages_boleto_boleto__["a" /* BoletoPage */],
                 __WEBPACK_IMPORTED_MODULE_16__pages_adicionar_cart_o_adicionar_cart_o__["a" /* AdicionarCartOPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_pesquisar_pesquisar__["a" /* PesquisarPage */]
+                __WEBPACK_IMPORTED_MODULE_17__pages_pesquisar_pesquisar__["a" /* PesquisarPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_conta_conta__["a" /* ContaPage */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_18__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_19__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_19__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_20__ionic_native_splash_screen__["a" /* SplashScreen */],
                 { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
             ]
         })
@@ -572,7 +539,7 @@ var InicioPage = /** @class */ (function () {
     };
     InicioPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-inicio',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/inicio/inicio.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Inicio\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page2">\n  <img src="assets/img/Pi672XjRcuQYSxGVYuWF_petshop.jpg" style="display:block;width:30%;height:auto;margin-left:auto;margin-right:auto;" />\n  <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n    <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n  </div>\n  <form id="inicio-form5">\n    <div class="spacer" style="width:300px;height:21px;" id="inicio-spacer23"></div>\n    <ion-searchbar placeholder="Pesquisar" name="" id="inicio-search1"></ion-searchbar>\n  </form>\n  <div class="spacer" style="width:300px;height:39px;" id="inicio-spacer24"></div>\n  <ion-card id="inicio-card29">\n    <ion-list>\n      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n      </div>\n      <h5 id="inicio-heading10" style="color:#000000;">\n        produtos\n      </h5>\n      <ion-card id="inicio-card210">\n        <ion-list>\n          <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n            <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n          </div>\n          <ion-list id="inicio-list5">\n            <ion-item color="none" on-click="goToProduto()" id="inicio-list-item68">\n              <ion-avatar item-left>\n                <img src="assets/img/LTFfckPfSxqm38OK7eq9_racao.jpg" />\n              </ion-avatar>\n              <h2>\n                Ração Pedigree\n              </h2>\n            </ion-item>\n            <ion-item color="none" on-click="goToProduto()" id="inicio-list-item69">\n              <ion-avatar item-left>\n                <img src="assets/img/LTFfckPfSxqm38OK7eq9_racao.jpg" />\n              </ion-avatar>\n              <h2>\n                Ração Pedigree\n              </h2>\n            </ion-item>\n            <ion-item color="none" on-click="goToProduto()" id="inicio-list-item70">\n              <ion-avatar item-left>\n                <img src="assets/img/LTFfckPfSxqm38OK7eq9_racao.jpg" />\n              </ion-avatar>\n              <h2>\n                Ração Pedigree\n              </h2>\n            </ion-item>\n          </ion-list>\n        </ion-list>\n      </ion-card>\n    </ion-list>\n  </ion-card>\n  <ion-card id="inicio-card27">\n    <ion-list>\n      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n      </div>\n      <h5 id="inicio-heading9" style="color:#000000;">\n        sobre nós\n      </h5>\n      <div id="inicio-markdown21" class="show-list-numbers-and-dots">\n        <p style="color:#000000;">\n          Definimos um tipo elevado de tratamento com seu pet, tanto em produtos quanto em higiene ( tosa, banho, etc. ).\n        </p>\n        <p style="color:#000000;">\n          Criamos uma logistica unica que nos traz a certeza de que seremos o destaque em termo de eficiencia e qualidade.\n        </p>\n        <p style="color:#000000;">\n          Fundada em 2003, cada vez vem ganhando mais forma dentro do mercado, tem se destacado como uma das principais pet shops em questão a satisfação do cliente\n        </p>\n      </div>\n      <img src="assets/img/jKWqyoBEQrarD9AgcljT_loja.jpg" />\n    </ion-list>\n  </ion-card>\n  <ion-card id="inicio-card26">\n    <ion-list>\n      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n      </div>\n      <h5 id="inicio-heading8" style="color:#000000;">\n        Localização\n      </h5>\n      <div id="inicio-markdown20" class="show-list-numbers-and-dots">\n        <p style="color:#000000;">\n          Contamos com diversos filiados em diversas regiões do País, ache a mais perto de você.\n        </p>\n        <ul>\n          <li>\n            1 São Paulo São Paulo\n          </li>\n          <li>\n            2 Rio de Janeiro Rio de Janeiro\n          </li>\n          <li>\n            3 Brasília Distrito Federal\n          </li>\n          <li>\n            4 Salvador Bahia Bahia\n          </li>\n          <li>\n            5 Fortaleza Ceará\n          </li>\n          <li>\n            6 Belo Horizonte Minas Gerais\n          </li>\n          <li>\n            7 Manaus Amazonas\n          </li>\n          <li>\n            8 Curitiba Paraná\n          </li>\n          <li>\n            9 Recife Pernambuco\n          </li>\n          <li>\n            10 Goiânia Goiás\n          </li>\n          <li>\n            11 Belém Pará Pará\n          </li>\n          <li>\n            12 Porto Alegre Rio Grande do Sul\n          </li>\n          <li>\n            13 Guarulhos São Paulo\n          </li>\n        </ul>\n      </div>\n      <div class="spacer" style="width:300px;height:31px;" id="inicio-spacer25"></div>\n      <img src="assets/img/ZCVg3vLTaqHMJsV4IIRV_maps.jpg" />\n      <div class="spacer" style="width:300px;height:42px;" id="inicio-spacer26"></div>\n    </ion-list>\n  </ion-card>\n  <div class="spacer" style="height:100px;" id="inicio-spacer28"></div>\n  <div class="spacer" style="height:100px;" id="inicio-spacer27"></div>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/inicio/inicio.html"*/
+            selector: 'page-inicio',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/inicio/inicio.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Inicio\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page2">\n  <img src="assets/img/Pi672XjRcuQYSxGVYuWF_petshop.jpg" style="display:block;width:30%;height:auto;margin-left:auto;margin-right:auto;" />\n  <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n    <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n  </div>\n  <form id="inicio-form5">\n    <div class="spacer" style="width:300px;height:21px;" id="inicio-spacer23"></div>\n    <ion-searchbar placeholder="Pesquisar" name="" id="inicio-search1"></ion-searchbar>\n  </form>\n  <div class="spacer" style="width:300px;height:39px;" id="inicio-spacer24"></div>\n  <ion-card id="inicio-card29">\n    <ion-list>\n      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n      </div>\n      <h5 id="inicio-heading10" style="color:#000000;">\n        produtos\n      </h5>\n      <ion-card id="inicio-card210">\n        <ion-list>\n          <ion-list id="inicio-list5">\n            <ion-item color="none" on-click="goToProduto()" id="inicio-list-item68">\n              <ion-avatar item-left>\n                <img src="assets/img/LTFfckPfSxqm38OK7eq9_racao.jpg" />\n              </ion-avatar>\n              <h2>\n                Ração Pedigree\n              </h2>\n            </ion-item>\n            <ion-item color="none" on-click="goToProduto()" id="inicio-list-item69">\n              <ion-avatar item-left>\n                <img src="assets/img/LTFfckPfSxqm38OK7eq9_racao.jpg" />\n              </ion-avatar>\n              <h2>\n                Ração Pedigree\n              </h2>\n            </ion-item>\n            <ion-item color="none" on-click="goToProduto()" id="inicio-list-item70">\n              <ion-avatar item-left>\n                <img src="assets/img/LTFfckPfSxqm38OK7eq9_racao.jpg" />\n              </ion-avatar>\n              <h2>\n                Ração Pedigree\n              </h2>\n            </ion-item>\n          </ion-list>\n        </ion-list>\n      </ion-card>\n    </ion-list>\n  </ion-card>\n  <ion-card id="inicio-card27">\n    <ion-list>\n      <h5 id="inicio-heading9" style="color:#000000;">\n        sobre nós\n      </h5>\n      <div id="inicio-markdown21" class="show-list-numbers-and-dots">\n        <p style="color:#000000;">\n          Definimos um tipo elevado de tratamento com seu pet, tanto em produtos quanto em higiene ( tosa, banho, etc. ).\n        </p>\n        <p style="color:#000000;">\n          Criamos uma logistica unica que nos traz a certeza de que seremos o destaque em termo de eficiencia e qualidade.\n        </p>\n        <p style="color:#000000;">\n          Fundada em 2003, cada vez vem ganhando mais forma dentro do mercado, tem se destacado como uma das principais pet shops em questão a satisfação do cliente\n        </p>\n      </div>\n      <img src="assets/img/jKWqyoBEQrarD9AgcljT_loja.jpg" />\n    </ion-list>\n  </ion-card>\n  <ion-card id="inicio-card26">\n    <ion-list>\n      <h5 id="inicio-heading8" style="color:#000000;">\n        Localização\n      </h5>\n      <div id="inicio-markdown20" class="show-list-numbers-and-dots">\n        <p style="color:#000000;">\n          Contamos com diversos filiados em diversas regiões do País, ache a mais perto de você.\n        </p>\n        <ul>\n          <li>\n            1 São Paulo São Paulo\n          </li>\n          <li>\n            2 Rio de Janeiro Rio de Janeiro\n          </li>\n          <li>\n            3 Brasília Distrito Federal\n          </li>\n          <li>\n            4 Salvador Bahia Bahia\n          </li>\n          <li>\n            5 Fortaleza Ceará\n          </li>\n          <li>\n            6 Belo Horizonte Minas Gerais\n          </li>\n          <li>\n            7 Manaus Amazonas\n          </li>\n          <li>\n            8 Curitiba Paraná\n          </li>\n          <li>\n            9 Recife Pernambuco\n          </li>\n          <li>\n            10 Goiânia Goiás\n          </li>\n          <li>\n            11 Belém Pará Pará\n          </li>\n          <li>\n            12 Porto Alegre Rio Grande do Sul\n          </li>\n          <li>\n            13 Guarulhos São Paulo\n          </li>\n        </ul>\n      </div>\n      <div class="spacer" style="width:300px;height:31px;" id="inicio-spacer25"></div>\n      <img src="assets/img/ZCVg3vLTaqHMJsV4IIRV_maps.jpg" />\n      <div class="spacer" style="width:300px;height:42px;" id="inicio-spacer26"></div>\n    </ion-list>\n  </ion-card>\n  <div class="spacer" style="height:100px;" id="inicio-spacer28"></div>\n  <div class="spacer" style="height:100px;" id="inicio-spacer27"></div>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/inicio/inicio.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], InicioPage);
@@ -930,6 +897,171 @@ var PesquisarPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=pesquisar.js.map
+
+/***/ }),
+
+/***/ 281:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConfiguraEsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__inicio_inicio__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__produto_produto__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__carrinho_carrinho__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__cart_o_cart_o__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__finalizar_finalizar__ = __webpack_require__(43);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+var ConfiguraEsPage = /** @class */ (function () {
+    // this tells the tabs component which Pages
+    // should be each tab's root Page
+    function ConfiguraEsPage(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    ConfiguraEsPage.prototype.goToLogin = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* LoginPage */]);
+    };
+    ConfiguraEsPage.prototype.goToInicio = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__inicio_inicio__["a" /* InicioPage */]);
+    };
+    ConfiguraEsPage.prototype.goToProduto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__produto_produto__["a" /* ProdutoPage */]);
+    };
+    ConfiguraEsPage.prototype.goToCarrinho = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__carrinho_carrinho__["a" /* CarrinhoPage */]);
+    };
+    ConfiguraEsPage.prototype.goToCartO = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__cart_o_cart_o__["a" /* CartOPage */]);
+    };
+    ConfiguraEsPage.prototype.goToFinalizar = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__finalizar_finalizar__["a" /* FinalizarPage */]);
+    };
+    ConfiguraEsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-configura-es',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/configura-es/configura-es.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Configurações\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page4">\n  <img src="assets/img/ru13jJrgSlyk1rqVTgVu_petshop.jpg" style="display:block;width:40%;height:auto;margin-left:auto;margin-right:auto;" />\n  <div class="spacer" style="width:300px;height:26px;" id="configuraEs-spacer13"></div>\n  <ion-card id="configuraEs-card21">\n    <ion-list>\n      <ion-item color="none" id="configuraEs-list-item85">\n        <ion-icon name="person" item-left></ion-icon>\n        Conta\n      </ion-item>\n      <ion-item color="none" on-click="goToCartO()" id="configuraEs-list-item87">\n        <ion-icon name="card" item-left></ion-icon>\n        Cartões\n      </ion-item>\n      <ion-item color="none" on-click="goToLogin()" id="configuraEs-list-item88">\n        <ion-icon name="exit" item-left></ion-icon>\n        Sair\n      </ion-item>\n      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n      </div>\n    </ion-list>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/configura-es/configura-es.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+    ], ConfiguraEsPage);
+    return ConfiguraEsPage;
+}());
+
+//# sourceMappingURL=configura-es.js.map
+
+/***/ }),
+
+/***/ 282:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContaPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__configura_es_configura_es__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__inicio_inicio__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__produto_produto__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__carrinho_carrinho__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__cart_o_cart_o__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__finalizar_finalizar__ = __webpack_require__(43);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+var ContaPage = /** @class */ (function () {
+    // this tells the tabs component which Pages
+    // should be each tab's root Page
+    function ContaPage(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    ContaPage.prototype.goToConfiguraEs = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__configura_es_configura_es__["a" /* ConfiguraEsPage */]);
+    };
+    ContaPage.prototype.goToLogin = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__login_login__["a" /* LoginPage */]);
+    };
+    ContaPage.prototype.goToInicio = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__inicio_inicio__["a" /* InicioPage */]);
+    };
+    ContaPage.prototype.goToProduto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__produto_produto__["a" /* ProdutoPage */]);
+    };
+    ContaPage.prototype.goToCarrinho = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__carrinho_carrinho__["a" /* CarrinhoPage */]);
+    };
+    ContaPage.prototype.goToCartO = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__cart_o_cart_o__["a" /* CartOPage */]);
+    };
+    ContaPage.prototype.goToFinalizar = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__finalizar_finalizar__["a" /* FinalizarPage */]);
+    };
+    ContaPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-conta',template:/*ion-inline-start:"/home/thiago/Desktop/app/src/pages/conta/conta.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Conta\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page15">\n  <div class="spacer" style="width:300px;height:19px;" id="conta-spacer30"></div>\n  <img src="assets/img/pOQKYujfS2WBxYvlBmkt_person.jpg" style="display:block;width:50%;height:auto;margin-left:auto;margin-right:auto;" />\n  <div class="spacer" style="width:300px;height:50px;" id="conta-spacer29"></div>\n  <ion-list id="conta-list8">\n    <ion-item id="conta-input13">\n      <ion-label>\n        Nome\n      </ion-label>\n      <ion-input type="text" placeholder="Maria Dolores"></ion-input>\n    </ion-item>\n    <ion-item id="conta-input14">\n      <ion-label>\n        Endereço\n      </ion-label>\n      <ion-input type="text" placeholder="Rua Afonso Ricardo. 233"></ion-input>\n    </ion-item>\n    <ion-item id="conta-input15">\n      <ion-label>\n        Nascimento\n      </ion-label>\n      <ion-input type="date" placeholder="11/03/1988"></ion-input>\n    </ion-item>\n  </ion-list>\n  <button id="conta-button9" ion-button color="positive" block on-click="goToConfiguraEs()">\n    Salvar\n  </button>\n</ion-content>'/*ion-inline-end:"/home/thiago/Desktop/app/src/pages/conta/conta.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+    ], ContaPage);
+    return ContaPage;
+}());
+
+//# sourceMappingURL=conta.js.map
 
 /***/ }),
 
