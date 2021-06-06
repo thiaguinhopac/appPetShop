@@ -22,7 +22,6 @@ export class ProdutoPage {
   constructor(public navCtrl: NavController) {
     this.init();
   }
-
   init(){
     let produto = DataBase.detalharProduto();
     this.nomeDoProduto = produto.nome;
