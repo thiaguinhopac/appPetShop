@@ -41,5 +41,29 @@
   <!-- The bundle js is generated during the build process -->
   <script src="build/main.js"></script>
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyChdqTfFJN9_5Oif7gPPzH4G_PuMfbuV28",
+    authDomain: "apppetshop-b7d09.firebaseapp.com",
+    projectId: "apppetshop-b7d09",
+    storageBucket: "apppetshop-b7d09.appspot.com",
+    messagingSenderId: "386371109390",
+    appId: "1:386371109390:web:e24c573e81f8ae891a725f",
+    measurementId: "G-Z1F055YPSG"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
 </body>
 </html>

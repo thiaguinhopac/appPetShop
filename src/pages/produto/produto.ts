@@ -6,6 +6,7 @@ import { CartOPage } from '../cart-o/cart-o';
 import { FinalizarPage } from '../finalizar/finalizar';
 import { InicioPage } from '../inicio/inicio';
 import { BoletoPage } from '../boleto/boleto';
+import { DataBase } from '../../db';
 
 @Component({
   selector: 'page-produto',
@@ -14,8 +15,19 @@ import { BoletoPage } from '../boleto/boleto';
 export class ProdutoPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
+
+
+  nomeDoProduto: string;
+
   constructor(public navCtrl: NavController) {
+    this.init();
   }
+
+  init(){
+    let produto = DataBase.detalharProduto();
+    this.nomeDoProduto = produto.nome;
+  }
+
   goToCarrinho(params){
     if (!params) params = {};
     this.navCtrl.push(CarrinhoPage);

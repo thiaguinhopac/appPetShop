@@ -8,7 +8,6 @@ import { CartOPage } from '../cart-o/cart-o';
 import { FinalizarPage } from '../finalizar/finalizar';
 import { BoletoPage } from '../boleto/boleto';
 import { CadastrarPage } from '../cadastrar/cadastrar';
-import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-login',
@@ -19,6 +18,10 @@ export class LoginPage {
   // should be each tab's root Page
   constructor(public navCtrl: NavController) {
   }
+  ngOnInit() {
+
+  }
+  
   goToInicio(params){
     if (!params) params = {};
     this.navCtrl.push(InicioPage);

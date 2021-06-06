@@ -6,55 +6,44 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page2">
+  
   <img src="assets/img/Pi672XjRcuQYSxGVYuWF_petshop.jpg" style="display:block;width:30%;height:auto;margin-left:auto;margin-right:auto;" />
-  <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">
-    <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>
-  </div>
   <form id="inicio-form5">
-    <ion-searchbar placeholder="Pesquisar" name="" id="inicio-search1"></ion-searchbar>
+    <ion-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel" placeholder="Pesquisar" name="" id="inicio-search1" animated></ion-searchbar>
   </form>
-  <ion-card id="inicio-card29">
+  <ion-card id="inicio-card" style="width: 90%;">
+    <div class="spacer" style="width:300px;height:30px;" id="cadastrar-spacer4"></div>
+    <div id="inicio-heading10" style="color:#000000;text-align: center;font-size: large;font-style: unset;">
+      Produtos
+    </div>
+    <div class="spacer" style="width:300px;height:30px;" id="cadastrar-spacer4"></div>
     <ion-list>
-      <h5 id="inicio-heading10" style="color:#000000;">
-        produtos
-      </h5>
-      <ion-card id="inicio-card210">
-        <ion-list>
-          <ion-list id="inicio-list5">
-            <ion-item color="none" on-click="goToProduto()" id="inicio-list-item68">
+      <div id="carrinho-container1" style="overflow-y: auto;height: 200px;">
+        <ion-list id="carrinho-list1" *ngFor="let prod of listInicio; let i=index" style="height: min-content;">
+          <ion-item-sliding>
+            <ion-item color="none" on-click="goToProduto()" id="carrinho-list-item7" >
               <ion-avatar item-left>
-                <img src="assets/img/LTFfckPfSxqm38OK7eq9_racao.jpg" />
+                <img src={{prod.image}}/>
               </ion-avatar>
               <h2>
-                Ração Pedigree
+                {{prod.name}}
               </h2>
             </ion-item>
-            <ion-item color="none" on-click="goToProduto()" id="inicio-list-item69">
-              <ion-avatar item-left>
-                <img src="assets/img/LTFfckPfSxqm38OK7eq9_racao.jpg" />
-              </ion-avatar>
-              <h2>
-                Ração Pedigree
-              </h2>
-            </ion-item>
-            <ion-item color="none" on-click="goToProduto()" id="inicio-list-item70">
-              <ion-avatar item-left>
-                <img src="assets/img/LTFfckPfSxqm38OK7eq9_racao.jpg" />
-              </ion-avatar>
-              <h2>
-                Ração Pedigree
-              </h2>
-            </ion-item>
-          </ion-list>
+            <ion-item-options side="left">
+              <button ion-button color="light"></button>
+            </ion-item-options>
+          </ion-item-sliding>
         </ion-list>
-      </ion-card>
+      </div>
     </ion-list>
   </ion-card>
-  <ion-card id="inicio-card27">
+  <ion-card id="inicio-card">
+    <div class="spacer" style="width:300px;height:30px;" id="cadastrar-spacer4"></div>
     <ion-list>
-      <h5 id="inicio-heading9" style="color:#000000;">
-        sobre nós
-      </h5>
+      <div id="inicio-heading10" style="color:#000000;text-align: center;font-size: large;font-style: unset;">
+        Sobre nós
+      </div>
+      <div class="spacer" style="width:300px;height:30px;" id="cadastrar-spacer4"></div>
       <div id="inicio-markdown21" class="show-list-numbers-and-dots">
         <p style="color:#000000;">
           Definimos um tipo elevado de tratamento com seu pet, tanto em produtos quanto em higiene ( tosa, banho, etc. ).
@@ -69,59 +58,25 @@
       <img src="assets/img/jKWqyoBEQrarD9AgcljT_loja.jpg" />
     </ion-list>
   </ion-card>
-  <ion-card id="inicio-card26">
+  <ion-card id="inicio-card">
     <ion-list>
-      <h5 id="inicio-heading8" style="color:#000000;">
+      <div class="spacer" style="width:300px;height:30px;" id="cadastrar-spacer4"></div>
+      <div id="inicio-heading10" style="color:#000000;text-align: center;font-size: large;font-style: unset;">
         Localização
-      </h5>
+      </div>
+    <div class="spacer" style="width:300px;height:30px;" id="cadastrar-spacer4"></div>
       <div id="inicio-markdown20" class="show-list-numbers-and-dots">
         <p style="color:#000000;">
           Contamos com diversos filiados em diversas regiões do País, ache a mais perto de você.
         </p>
-        <ul>
+        <ul *ngFor="let loc of listLoc; let i=index">
           <li>
-            1 São Paulo São Paulo
-          </li>
-          <li>
-            2 Rio de Janeiro Rio de Janeiro
-          </li>
-          <li>
-            3 Brasília Distrito Federal
-          </li>
-          <li>
-            4 Salvador Bahia Bahia
-          </li>
-          <li>
-            5 Fortaleza Ceará
-          </li>
-          <li>
-            6 Belo Horizonte Minas Gerais
-          </li>
-          <li>
-            7 Manaus Amazonas
-          </li>
-          <li>
-            8 Curitiba Paraná
-          </li>
-          <li>
-            9 Recife Pernambuco
-          </li>
-          <li>
-            10 Goiânia Goiás
-          </li>
-          <li>
-            11 Belém Pará Pará
-          </li>
-          <li>
-            12 Porto Alegre Rio Grande do Sul
-          </li>
-          <li>
-            13 Guarulhos São Paulo
+            {{loc}}
           </li>
         </ul>
       </div>
       <div class="spacer" style="width:300px;height:31px;" id="inicio-spacer25"></div>
-      <img src="assets/img/ZCVg3vLTaqHMJsV4IIRV_maps.jpg" />
+      <img src="assets/img/ZCVg3vLTaqHMJsV4IIRV_maps.jpg" onclick="this.onMapClick"/>
       <div class="spacer" style="width:300px;height:42px;" id="inicio-spacer26"></div>
     </ion-list>
   </ion-card>

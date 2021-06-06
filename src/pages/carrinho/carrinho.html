@@ -8,41 +8,16 @@
 <ion-content padding id="page3">
   <img src="assets/img/knTzFWINROSD2JgCRu5R_Bispg5DQCyOby9869Wvj_carrinho_de_compras.jpg" style="display:block;width:40%;height:auto;margin-left:auto;margin-right:auto;" />
   <div class="spacer" style="width:300px;height:26px;" id="carrinho-spacer1"></div>
-  <div id="carrinho-container1">
-    <ion-list id="carrinho-list1">
+  <h4>Produtos</h4>
+  <div id="carrinho-container1" style="overflow-y: auto;height: 50%;">
+    <ion-list id="carrinho-list1" *ngFor="let prod of listCarrinho; let i=index" style="height: min-content;">
       <ion-item-sliding>
-        <ion-item color="none" on-click="goToProduto()" id="carrinho-list-item7">
+        <ion-item color="none" on-click="goToProduto()" id="carrinho-list-item7" >
           <ion-avatar item-left>
-            <img src="assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg" />
+            <img src={{prod.image}}/>
           </ion-avatar>
           <h2>
-            Ração Pedigree
-          </h2>
-        </ion-item>
-        <ion-item-options side="left">
-          <button ion-button color="light"></button>
-        </ion-item-options>
-      </ion-item-sliding>
-      <ion-item-sliding>
-        <ion-item color="none" on-click="goToProduto()" id="carrinho-list-item18">
-          <ion-avatar item-left>
-            <img src="assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg" />
-          </ion-avatar>
-          <h2>
-            Ração Pedigree
-          </h2>
-        </ion-item>
-        <ion-item-options side="left">
-          <button ion-button color="light"></button>
-        </ion-item-options>
-      </ion-item-sliding>
-      <ion-item-sliding>
-        <ion-item color="none" on-click="goToProduto()" id="carrinho-list-item19">
-          <ion-avatar item-left>
-            <img src="assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg" />
-          </ion-avatar>
-          <h2>
-            Ração Pedigree
+            {{prod.name}}
           </h2>
         </ion-item>
         <ion-item-options side="left">
@@ -50,12 +25,12 @@
         </ion-item-options>
       </ion-item-sliding>
     </ion-list>
-    <div class="spacer" style="width:300px;height:16px;" id="carrinho-spacer9"></div>
-    <div id="carrinho-markdown8" style="text-align:right;" class="show-list-numbers-and-dots">
-      <p style="color:#000000;">
-        Total: R$ 149.7
-      </p>
-    </div>
+  </div>
+  <div class="spacer" style="width:300px;height:16px;" id="carrinho-spacer9"></div>
+  <div id="carrinho-markdown8" style="text-align:right;" class="show-list-numbers-and-dots">
+    <p style="color:#000000;">
+      Total: R$ 149.7
+    </p>
   </div>
   <div class="spacer" style="width:300px;height:22px;" id="carrinho-spacer10"></div>
   <div id="carrinho-markdown9" style="text-align:right;" class="show-list-numbers-and-dots">

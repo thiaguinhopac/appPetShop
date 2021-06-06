@@ -5,8 +5,8 @@ import { InicioPage } from '../inicio/inicio';
 import { ProdutoPage } from '../produto/produto';
 import { CarrinhoPage } from '../carrinho/carrinho';
 import { PagamentoPage } from '../pagamento/pagamento';
-import { CartOPage } from '../cart-o/cart-o';
 import { BoletoPage } from '../boleto/boleto';
+import { AdicionarCartOPage } from '../adicionar-cart-o/adicionar-cart-o';
 
 @Component({
   selector: 'page-cart-o',
@@ -38,5 +38,8 @@ export class CartOPage {
   }goToBoleto(params){
     if (!params) params = {};
     this.navCtrl.push(BoletoPage);
+  }goToAdicionarCartao(params){
+    if (!params) params = {};
+    this.navCtrl.push(AdicionarCartOPage);
   }
 }

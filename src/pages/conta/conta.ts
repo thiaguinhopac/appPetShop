@@ -10,7 +10,6 @@ import { CartOPage } from '../cart-o/cart-o';
 import { FinalizarPage } from '../finalizar/finalizar';
 import { BoletoPage } from '../boleto/boleto';
 import { CadastrarPage } from '../cadastrar/cadastrar';
-import { ContaPage } from '../conta/conta';
 
 @Component({
   selector: 'page-conta',
@@ -19,6 +18,10 @@ import { ContaPage } from '../conta/conta';
 export class ContaPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
+  nome: string;
+  dataNasc: string;
+  endereco: string;
+  
   constructor(public navCtrl: NavController) {
   }
   goToConfiguraEs(params){

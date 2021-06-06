@@ -6,7 +6,6 @@ import { ProdutoPage } from '../produto/produto';
 import { CarrinhoPage } from '../carrinho/carrinho';
 import { PagamentoPage } from '../pagamento/pagamento';
 import { CartOPage } from '../cart-o/cart-o';
-import { BoletoPage } from '../boleto/boleto';
 
 @Component({
   selector: 'page-boleto',

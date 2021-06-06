@@ -10,7 +10,6 @@ import { FinalizarPage } from '../finalizar/finalizar';
 import { BoletoPage } from '../boleto/boleto';
 import { CadastrarPage } from '../cadastrar/cadastrar';
 import { ContaPage } from '../conta/conta';
-import { ConfiguraEsPage } from '../configura-es/configura-es';
 
 @Component({
   selector: 'page-configura-es',

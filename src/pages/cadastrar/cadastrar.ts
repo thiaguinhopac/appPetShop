@@ -8,8 +8,6 @@ import { PagamentoPage } from '../pagamento/pagamento';
 import { CartOPage } from '../cart-o/cart-o';
 import { FinalizarPage } from '../finalizar/finalizar';
 import { BoletoPage } from '../boleto/boleto';
-import { CadastrarPage } from '../cadastrar/cadastrar';
-
 @Component({
   selector: 'page-cadastrar',
   templateUrl: 'cadastrar.html'

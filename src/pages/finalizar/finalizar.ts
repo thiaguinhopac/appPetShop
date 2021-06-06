@@ -5,7 +5,6 @@ import { ProdutoPage } from '../produto/produto';
 import { CarrinhoPage } from '../carrinho/carrinho';
 import { PagamentoPage } from '../pagamento/pagamento';
 import { CartOPage } from '../cart-o/cart-o';
-import { FinalizarPage } from '../finalizar/finalizar';
 import { BoletoPage } from '../boleto/boleto';
 
 @Component({
