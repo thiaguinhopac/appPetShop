@@ -15,8 +15,17 @@ import { BoletoPage } from '../boleto/boleto';
 export class PesquisarPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
+
+  nomeDoProduto: string;
+
   constructor(public navCtrl: NavController) {
+    this.init();
   }
+  init(){
+    let produto = DataBase.detalharProduto();
+    this.nomeDoProduto = produto.nome;
+  }
+
   goToProduto(params){
     if (!params) params = {};
     this.navCtrl.push(ProdutoPage);
