@@ -72,7 +72,7 @@ export class DataBase {
   }
   //produto
   public detalharProduto(id){
-
+  asa
     return {urlImage : '', nome : '', preco: '', descricao: ''}
   }
 

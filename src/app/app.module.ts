@@ -23,6 +23,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { IonicStorageModule } from '@ionic/storage-angular';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { ServicesFirebaseProvider } from '../providers/services-firebase/services-firebase';
 
 @NgModule({
   declarations: [
@@ -70,7 +73,8 @@ import { IonicStorageModule } from '@ionic/storage-angular';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ServicesFirebaseProvider
   ]
 })
 export class AppModule {}

@@ -16,7 +16,7 @@ webpackJsonp([0],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__finalizar_finalizar__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__boleto_boleto__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__cadastrar_cadastrar__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__conta_conta__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__conta_conta__ = __webpack_require__(208);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -385,7 +385,7 @@ var CarrinhoPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__finalizar_finalizar__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__inicio_inicio__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__boleto_boleto__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__db__ = __webpack_require__(463);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__db__ = __webpack_require__(283);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -453,10 +453,10 @@ var ProdutoPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-produto',template:/*ion-inline-start:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\produto\produto.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Produto\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding id="page8">\n\n  <img src="assets/img/f9zxKQJUR6CChhkaZDmp_racao.jpg" style="display:block;width:70%;height:auto;margin-left:auto;margin-right:auto;" />\n\n  <h1 id="produto-heading1" style="color:#000000;text-align:center;">\n\n    Ração Pedigree\n\n  </h1>\n\n  <h1 id="produto-heading2" style="color:#ABFFAA;text-align:center;">\n\n    R$ 49,90\n\n  </h1>\n\n  <div class="spacer" style="width:300px;height:58px;" id="produto-spacer6"></div>\n\n  <div id="produto-markdown1" class="show-list-numbers-and-dots">\n\n    <p style="color:#000000;">\n\n      descrição:\n\n    </p>\n\n  </div>\n\n  <div id="produto-markdown2" style="text-align:center;" class="show-list-numbers-and-dots">\n\n    <p style="color:#000000;">\n\n      Idade: Adulto\n\n    </p>\n\n    <p style="color:#000000;">\n\n      Linha: Premium\n\n    </p>\n\n    <p style="color:#000000;">\n\n      Pet: Cachorros\n\n    </p>\n\n    <p style="color:#000000;">\n\n      Porte de Raça: Pequeno\n\n    </p>\n\n    <p style="color:#000000;">\n\n      Sabor: Carne\n\n    </p>\n\n    <p style="color:#000000;">\n\n      Tipo: Ração seca\n\n    </p>\n\n    <p style="color:#000000;">\n\n      Apresentação: 1kg, 3kg, 10,1kg, 15kg e 20kg\n\n    </p>\n\n    <p style="color:#000000;">\n\n      Indicação: Alimentação diária de cães adultos de pequeno porte\n\n    </p>\n\n  </div>\n\n  <div class="spacer" style="width:300px;height:56px;" id="produto-spacer8"></div>\n\n  <button id="produto-button5" ion-button color="energized" block on-click="goToCarrinho()">\n\n    Adicionar ao carrinho\n\n  </button>\n\n  <div class="spacer" style="width:300px;height:100px;" id="produto-spacer7"></div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\produto\produto.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], ProdutoPage);
     return ProdutoPage;
-    var ProdutoPage_1, _a;
+    var ProdutoPage_1;
 }());
 
 //# sourceMappingURL=produto.js.map
@@ -579,7 +579,7 @@ var PagamentoPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__carrinho_carrinho__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pagamento_pagamento__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__boleto_boleto__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__adicionar_cart_o_adicionar_cart_o__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__adicionar_cart_o_adicionar_cart_o__ = __webpack_require__(204);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -881,6 +881,92 @@ var TabsControllerPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdicionarCartOPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cart_o_cart_o__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__finalizar_finalizar__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__inicio_inicio__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__produto_produto__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__carrinho_carrinho__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pagamento_pagamento__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__boleto_boleto__ = __webpack_require__(19);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+var AdicionarCartOPage = /** @class */ (function () {
+    // this tells the tabs component which Pages
+    // should be each tab's root Page
+    function AdicionarCartOPage(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    AdicionarCartOPage.prototype.goToCartO = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__cart_o_cart_o__["a" /* CartOPage */]);
+    };
+    AdicionarCartOPage.prototype.goToFinalizar = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__finalizar_finalizar__["a" /* FinalizarPage */]);
+    };
+    AdicionarCartOPage.prototype.goToInicio = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__inicio_inicio__["a" /* InicioPage */]);
+    };
+    AdicionarCartOPage.prototype.goToProduto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__produto_produto__["a" /* ProdutoPage */]);
+    };
+    AdicionarCartOPage.prototype.goToCarrinho = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__carrinho_carrinho__["a" /* CarrinhoPage */]);
+    };
+    AdicionarCartOPage.prototype.goToPagamento = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__pagamento_pagamento__["a" /* PagamentoPage */]);
+    };
+    AdicionarCartOPage.prototype.goToBoleto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__boleto_boleto__["a" /* BoletoPage */]);
+    };
+    AdicionarCartOPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-adicionar-cart-o',template:/*ion-inline-start:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\adicionar-cart-o\adicionar-cart-o.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Adicionar Cartão\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding id="page13">\n\n  <img src="assets/img/8N48tWGMSKaVZOIMjFqN_cartao.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />\n\n  <div class="spacer" style="width:300px;height:36px;" id="adicionarCartO-spacer20"></div>\n\n  <form id="adicionarCartO-form4">\n\n    <ion-item id="adicionarCartO-input9">\n\n      <ion-label stacked>\n\n        Nome impresso no cartão\n\n      </ion-label>\n\n      <ion-input type="text" placeholder="Matailda Venila"></ion-input>\n\n    </ion-item>\n\n    <ion-item id="adicionarCartO-input10">\n\n      <ion-label stacked>\n\n        Numero do cartão\n\n      </ion-label>\n\n      <ion-input type="number" placeholder="5505 5055 0055 5500"></ion-input>\n\n    </ion-item>\n\n    <ion-item id="adicionarCartO-input11">\n\n      <ion-label stacked>\n\n        Validade\n\n      </ion-label>\n\n      <ion-input type="date" placeholder=""></ion-input>\n\n    </ion-item>\n\n    <div class="spacer" style="width:300px;height:52px;" id="adicionarCartO-spacer21"></div>\n\n    <button id="adicionarCartO-button10" ion-button color="energized" block on-click="goToCartO()">\n\n      Salvar cartão\n\n    </button>\n\n    <div class="spacer" style="height:100px;" id="adicionarCartO-spacer22"></div>\n\n  </form>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\adicionar-cart-o\adicionar-cart-o.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+    ], AdicionarCartOPage);
+    return AdicionarCartOPage;
+}());
+
+//# sourceMappingURL=adicionar-cart-o.js.map
+
+/***/ }),
+
+/***/ 208:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
@@ -989,13 +1075,13 @@ var ContaPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 207:
+/***/ 209:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(232);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1003,7 +1089,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 230:
+/***/ 232:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1011,12 +1097,12 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(275);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_inicio_inicio__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_carrinho_carrinho__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_configura_es_configura_es__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_controller_tabs_controller__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_page_page__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_page_page__ = __webpack_require__(285);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_cadastrar_cadastrar__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_produto_produto__ = __webpack_require__(15);
@@ -1024,18 +1110,20 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_cart_o_cart_o__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_finalizar_finalizar__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_boleto_boleto__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_adicionar_cart_o_adicionar_cart_o__ = __webpack_require__(282);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_pesquisar_pesquisar__ = __webpack_require__(283);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_conta_conta__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_adicionar_cart_o_adicionar_cart_o__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_pesquisar_pesquisar__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_conta_conta__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_status_bar__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_splash_screen__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_storage_angular__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_storage_angular__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_services_firebase_services_firebase__ = __webpack_require__(287);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1110,7 +1198,8 @@ var AppModule = /** @class */ (function () {
             providers: [
                 __WEBPACK_IMPORTED_MODULE_19__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_20__ionic_native_splash_screen__["a" /* SplashScreen */],
-                { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
+                { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_22__providers_services_firebase_services_firebase__["a" /* ServicesFirebaseProvider */]
             ]
         })
     ], AppModule);
@@ -1121,7 +1210,7 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 273:
+/***/ 275:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1167,222 +1256,13 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 281:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PagePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var PagePage = /** @class */ (function () {
-    // this tells the tabs component which Pages
-    // should be each tab's root Page
-    function PagePage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    PagePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-page',template:/*ion-inline-start:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\page\page.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Page\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding id="page5"></ion-content>'/*ion-inline-end:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\page\page.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
-    ], PagePage);
-    return PagePage;
-}());
-
-//# sourceMappingURL=page.js.map
-
-/***/ }),
-
-/***/ 282:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdicionarCartOPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cart_o_cart_o__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__finalizar_finalizar__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__inicio_inicio__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__produto_produto__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__carrinho_carrinho__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pagamento_pagamento__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__boleto_boleto__ = __webpack_require__(19);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-
-var AdicionarCartOPage = /** @class */ (function () {
-    // this tells the tabs component which Pages
-    // should be each tab's root Page
-    function AdicionarCartOPage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    AdicionarCartOPage.prototype.goToCartO = function (params) {
-        if (!params)
-            params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__cart_o_cart_o__["a" /* CartOPage */]);
-    };
-    AdicionarCartOPage.prototype.goToFinalizar = function (params) {
-        if (!params)
-            params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__finalizar_finalizar__["a" /* FinalizarPage */]);
-    };
-    AdicionarCartOPage.prototype.goToInicio = function (params) {
-        if (!params)
-            params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__inicio_inicio__["a" /* InicioPage */]);
-    };
-    AdicionarCartOPage.prototype.goToProduto = function (params) {
-        if (!params)
-            params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__produto_produto__["a" /* ProdutoPage */]);
-    };
-    AdicionarCartOPage.prototype.goToCarrinho = function (params) {
-        if (!params)
-            params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__carrinho_carrinho__["a" /* CarrinhoPage */]);
-    };
-    AdicionarCartOPage.prototype.goToPagamento = function (params) {
-        if (!params)
-            params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__pagamento_pagamento__["a" /* PagamentoPage */]);
-    };
-    AdicionarCartOPage.prototype.goToBoleto = function (params) {
-        if (!params)
-            params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__boleto_boleto__["a" /* BoletoPage */]);
-    };
-    AdicionarCartOPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-adicionar-cart-o',template:/*ion-inline-start:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\adicionar-cart-o\adicionar-cart-o.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Adicionar Cartão\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding id="page13">\n\n  <img src="assets/img/8N48tWGMSKaVZOIMjFqN_cartao.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />\n\n  <div class="spacer" style="width:300px;height:36px;" id="adicionarCartO-spacer20"></div>\n\n  <form id="adicionarCartO-form4">\n\n    <ion-item id="adicionarCartO-input9">\n\n      <ion-label stacked>\n\n        Nome impresso no cartão\n\n      </ion-label>\n\n      <ion-input type="text" placeholder="Matailda Venila"></ion-input>\n\n    </ion-item>\n\n    <ion-item id="adicionarCartO-input10">\n\n      <ion-label stacked>\n\n        Numero do cartão\n\n      </ion-label>\n\n      <ion-input type="number" placeholder="5505 5055 0055 5500"></ion-input>\n\n    </ion-item>\n\n    <ion-item id="adicionarCartO-input11">\n\n      <ion-label stacked>\n\n        Validade\n\n      </ion-label>\n\n      <ion-input type="date" placeholder=""></ion-input>\n\n    </ion-item>\n\n    <div class="spacer" style="width:300px;height:52px;" id="adicionarCartO-spacer21"></div>\n\n    <button id="adicionarCartO-button10" ion-button color="energized" block on-click="goToCartO()">\n\n      Salvar cartão\n\n    </button>\n\n    <div class="spacer" style="height:100px;" id="adicionarCartO-spacer22"></div>\n\n  </form>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\adicionar-cart-o\adicionar-cart-o.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
-    ], AdicionarCartOPage);
-    return AdicionarCartOPage;
-}());
-
-//# sourceMappingURL=adicionar-cart-o.js.map
-
-/***/ }),
-
 /***/ 283:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PesquisarPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__produto_produto__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__carrinho_carrinho__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pagamento_pagamento__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cart_o_cart_o__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__finalizar_finalizar__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__inicio_inicio__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__boleto_boleto__ = __webpack_require__(19);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-
-var PesquisarPage = /** @class */ (function () {
-    // this tells the tabs component which Pages
-    // should be each tab's root Page
-    function PesquisarPage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    PesquisarPage.prototype.goToProduto = function (params) {
-        if (!params)
-            params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__produto_produto__["a" /* ProdutoPage */]);
-    };
-    PesquisarPage.prototype.goToCarrinho = function (params) {
-        if (!params)
-            params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__carrinho_carrinho__["a" /* CarrinhoPage */]);
-    };
-    PesquisarPage.prototype.goToPagamento = function (params) {
-        if (!params)
-            params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__pagamento_pagamento__["a" /* PagamentoPage */]);
-    };
-    PesquisarPage.prototype.goToCartO = function (params) {
-        if (!params)
-            params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__cart_o_cart_o__["a" /* CartOPage */]);
-    };
-    PesquisarPage.prototype.goToFinalizar = function (params) {
-        if (!params)
-            params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__finalizar_finalizar__["a" /* FinalizarPage */]);
-    };
-    PesquisarPage.prototype.goToInicio = function (params) {
-        if (!params)
-            params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__inicio_inicio__["a" /* InicioPage */]);
-    };
-    PesquisarPage.prototype.goToBoleto = function (params) {
-        if (!params)
-            params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__boleto_boleto__["a" /* BoletoPage */]);
-    };
-    PesquisarPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-pesquisar',template:/*ion-inline-start:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\pesquisar\pesquisar.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Pesquisar\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding id="page14">\n\n  <form id="pesquisar-form6">\n\n    <ion-searchbar placeholder="Pesquisar" name="" id="pesquisar-search2"></ion-searchbar>\n\n  </form>\n\n  <ion-card id="pesquisar-card211">\n\n    <ion-list>\n\n      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n\n        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n\n      </div>\n\n      <ion-list id="pesquisar-list6">\n\n        <ion-item color="none" on-click="goToProduto()" id="pesquisar-list-item81">\n\n          <ion-avatar item-left>\n\n            <img src="assets/img/JcOqvKalQCajqT2BbPMP_racao.jpg" />\n\n          </ion-avatar>\n\n          <h2>\n\n            Ração Pedigree\n\n          </h2>\n\n        </ion-item>\n\n      </ion-list>\n\n    </ion-list>\n\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\pesquisar\pesquisar.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
-    ], PesquisarPage);
-    return PesquisarPage;
-}());
-
-//# sourceMappingURL=pesquisar.js.map
-
-/***/ }),
-
-/***/ 463:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataBase; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage_angular__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage_angular__ = __webpack_require__(205);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1483,6 +1363,7 @@ var DataBase = /** @class */ (function () {
     };
     //produto
     DataBase.prototype.detalharProduto = function (id) {
+        asa;
         return { urlImage: '', nome: '', preco: '', descricao: '' };
     };
     DataBase.perfil = {
@@ -1502,6 +1383,169 @@ var DataBase = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=db.js.map
+
+/***/ }),
+
+/***/ 285:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PagePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var PagePage = /** @class */ (function () {
+    // this tells the tabs component which Pages
+    // should be each tab's root Page
+    function PagePage(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    PagePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-page',template:/*ion-inline-start:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\page\page.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Page\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding id="page5"></ion-content>'/*ion-inline-end:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\page\page.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+    ], PagePage);
+    return PagePage;
+}());
+
+//# sourceMappingURL=page.js.map
+
+/***/ }),
+
+/***/ 286:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PesquisarPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__produto_produto__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__carrinho_carrinho__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pagamento_pagamento__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cart_o_cart_o__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__finalizar_finalizar__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__inicio_inicio__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__boleto_boleto__ = __webpack_require__(19);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+var PesquisarPage = /** @class */ (function () {
+    // this tells the tabs component which Pages
+    // should be each tab's root Page
+    function PesquisarPage(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    PesquisarPage.prototype.goToProduto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__produto_produto__["a" /* ProdutoPage */]);
+    };
+    PesquisarPage.prototype.goToCarrinho = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__carrinho_carrinho__["a" /* CarrinhoPage */]);
+    };
+    PesquisarPage.prototype.goToPagamento = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__pagamento_pagamento__["a" /* PagamentoPage */]);
+    };
+    PesquisarPage.prototype.goToCartO = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__cart_o_cart_o__["a" /* CartOPage */]);
+    };
+    PesquisarPage.prototype.goToFinalizar = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__finalizar_finalizar__["a" /* FinalizarPage */]);
+    };
+    PesquisarPage.prototype.goToInicio = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__inicio_inicio__["a" /* InicioPage */]);
+    };
+    PesquisarPage.prototype.goToBoleto = function (params) {
+        if (!params)
+            params = {};
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__boleto_boleto__["a" /* BoletoPage */]);
+    };
+    PesquisarPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-pesquisar',template:/*ion-inline-start:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\pesquisar\pesquisar.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Pesquisar\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding id="page14">\n\n  <form id="pesquisar-form6">\n\n    <ion-searchbar placeholder="Pesquisar" name="" id="pesquisar-search2"></ion-searchbar>\n\n  </form>\n\n  <ion-card id="pesquisar-card211">\n\n    <ion-list>\n\n      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n\n        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n\n      </div>\n\n      <ion-list id="pesquisar-list6">\n\n        <ion-item color="none" on-click="goToProduto()" id="pesquisar-list-item81">\n\n          <ion-avatar item-left>\n\n            <img src="assets/img/JcOqvKalQCajqT2BbPMP_racao.jpg" />\n\n          </ion-avatar>\n\n          <h2>\n\n            Ração Pedigree\n\n          </h2>\n\n        </ion-item>\n\n      </ion-list>\n\n    </ion-list>\n\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\pesquisar\pesquisar.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+    ], PesquisarPage);
+    return PesquisarPage;
+}());
+
+//# sourceMappingURL=pesquisar.js.map
+
+/***/ }),
+
+/***/ 287:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServicesFirebaseProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/*
+  Generated class for the ServicesFirebaseProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var ServicesFirebaseProvider = /** @class */ (function () {
+    function ServicesFirebaseProvider(http) {
+        this.http = http;
+        console.log('Hello ServicesFirebaseProvider Provider');
+    }
+    ServicesFirebaseProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
+    ], ServicesFirebaseProvider);
+    return ServicesFirebaseProvider;
+}());
+
+//# sourceMappingURL=services-firebase.js.map
 
 /***/ }),
 
@@ -1707,5 +1751,5 @@ var CadastrarPage = /** @class */ (function () {
 
 /***/ })
 
-},[207]);
+},[209]);
 //# sourceMappingURL=main.js.map
