@@ -11,7 +11,7 @@
   <ion-card id="cartO-card24">
     <ion-list>
       <ion-item color="none" on-click="goToFinalizar()" id="cartO-list-item28">
-        Carão de Crédito
+        {{numeroDoCartao}}
         <ion-note item-right></ion-note>
         <ion-icon name="card" item-right></ion-icon>
       </ion-item>
@@ -19,6 +19,6 @@
   </ion-card>
   <button id="cartO-button6" ion-button clear color="gray" block small>
     <ion-icon name="add-circle" onclick="this.goToAdicionarCartao"></ion-icon>
-    Adicionar novo cartão
+    {{adicionarNovoCartao}}
   </button>
 </ion-content>
