@@ -14,7 +14,14 @@ import { AdicionarCartOPage } from '../adicionar-cart-o/adicionar-cart-o';
 })
 export class CartOPage {
   
+  numeroDoCartao: string;
+
   constructor(public navCtrl: NavController) {
+    this.init();
+  }
+  init(){
+    let cartao = DataBase.listarCartao();
+    this.numeroDoCartao = cartao.numero;
   }
   goToFinalizar(params){
     if (!params) params = {};
