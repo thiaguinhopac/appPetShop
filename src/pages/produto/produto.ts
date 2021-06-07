@@ -18,12 +18,15 @@ export class ProdutoPage {
 
 
   nomeDoProduto: string;
+  preco: string;
+  descricao: string;
 
   constructor(public navCtrl: NavController) {
     this.init();
   }
+
   init(){
-    
+    var aux = DataBase.detalharProduto(this.nomeDoProduto);
   }
 
   goToCarrinho(params){
