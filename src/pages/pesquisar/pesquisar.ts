@@ -7,6 +7,7 @@ import { CartOPage } from '../cart-o/cart-o';
 import { FinalizarPage } from '../finalizar/finalizar';
 import { InicioPage } from '../inicio/inicio';
 import { BoletoPage } from '../boleto/boleto';
+import { DataBase } from '../../db';
 
 @Component({
   selector: 'page-pesquisar',
@@ -22,8 +23,8 @@ export class PesquisarPage {
     this.init();
   }
   init(){
-    let produto = DataBase.detalharProduto();
-    this.nomeDoProduto = produto.nome;
+   // let produto = DataBase.detalharProduto();
+   // this.nomeDoProduto = produto.nome;
   }
 
   goToProduto(params){

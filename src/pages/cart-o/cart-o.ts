@@ -7,6 +7,7 @@ import { CarrinhoPage } from '../carrinho/carrinho';
 import { PagamentoPage } from '../pagamento/pagamento';
 import { BoletoPage } from '../boleto/boleto';
 import { AdicionarCartOPage } from '../adicionar-cart-o/adicionar-cart-o';
+import { DataBase } from '../../db';
 
 @Component({
   selector: 'page-cart-o',
@@ -20,7 +21,7 @@ export class CartOPage {
     this.init();
   }
   init(){
-    let cartao = DataBase.listarCartao();
+    let cartao = DataBase.listarCartoes();
     this.numeroDoCartao = cartao.numero;
   }
   goToFinalizar(params){

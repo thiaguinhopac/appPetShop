@@ -8,6 +8,7 @@ import { CartOPage } from '../cart-o/cart-o';
 import { FinalizarPage } from '../finalizar/finalizar';
 import { BoletoPage } from '../boleto/boleto';
 import { CadastrarPage } from '../cadastrar/cadastrar';
+import { DataBase } from '../../db';
 
 @Component({
   selector: 'page-login',
@@ -17,6 +18,7 @@ export class LoginPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
   constructor(public navCtrl: NavController) {
+
   }
   ngOnInit() {
 
@@ -24,7 +26,14 @@ export class LoginPage {
   
   goToInicio(params){
     if (!params) params = {};
-    this.navCtrl.push(InicioPage);
+    var emailLogin = document.getElementById('emailLogin');
+    var senhaLogin = document.getElementById('senhaLogin');
+    if(emailLogin && senhaLogin){
+      console.log(emailLogin.nodeValue, senhaLogin.nodeValue);
+      if(DataBase.verificaLogin(emailLogin.nodeValue, senhaLogin.nodeValue)){
+        this.navCtrl.push(InicioPage);
+      }
+    }
   }goToProduto(params){
     if (!params) params = {};
     this.navCtrl.push(ProdutoPage);

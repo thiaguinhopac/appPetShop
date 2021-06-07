@@ -23,8 +23,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { IonicStorageModule } from '@ionic/storage-angular';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { ServicesFirebaseProvider } from '../providers/services-firebase/services-firebase';
 
 @NgModule({
@@ -49,7 +47,7 @@ import { ServicesFirebaseProvider } from '../providers/services-firebase/service
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
   ],
   bootstrap: [IonicApp],
   entryComponents: [

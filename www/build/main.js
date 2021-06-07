@@ -4,6 +4,150 @@ webpackJsonp([0],{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataBase; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage_angular__ = __webpack_require__(209);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+var fs = __webpack_require__(284);
+
+var DataBase = /** @class */ (function () {
+    function DataBase(storage) {
+        this.storage = storage;
+        this._storage = null;
+        this.init();
+    }
+    DataBase.prototype.init = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var storage;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.storage.create()];
+                    case 1:
+                        storage = _a.sent();
+                        this._storage = storage;
+                        this.getDb();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    DataBase.prototype.getDb = function () {
+        fs.readFile('dbOffline.json', 'utf8', function (err, data) {
+            if (err)
+                throw err;
+            this.db = JSON.parse(data);
+        });
+    };
+    DataBase.saveDb = function () {
+        fs.writeFile('dbOffline.json', this.db, function (err) {
+            if (err)
+                return console.log(err);
+        });
+    };
+    // Create and expose methods that users of this service can
+    // call, for example:
+    DataBase.prototype.set = function (key, value) {
+        this._storage.set(key, value);
+    };
+    DataBase.verificaLogin = function (email, senha) {
+        return this.db["perfil"][email].senha == senha;
+    };
+    DataBase.cadastrarUsuario = function (user, email, pass) {
+        this.db["perfil"][email].nome = user;
+        this.db["perfil"][email].senha = pass;
+        this.saveDb();
+    };
+    // carrinho
+    DataBase.listarCarrinho = function () {
+        //servidor local
+        return [
+            { urlImagem: '', nome: '', preco: '' }
+        ];
+    };
+    // carrinho
+    DataBase.adicionarCarrinho = function (produto) {
+    };
+    //pesquisar
+    DataBase.listarPesquisa = function (filtro) {
+        return [
+            { urlImagem: '', nome: '', preco: '' }
+        ];
+    };
+    //adicionarCartao
+    DataBase.adicionarCartao = function (nome, numero, validade, ccv) {
+    };
+    //cartoes
+    DataBase.listarCartoes = function () {
+    };
+    //produto
+    DataBase.detalharProduto = function (tipo, id) {
+        return this.db["produtos"][tipo][id];
+    };
+    DataBase.listarProdutos = function () {
+    };
+    DataBase.db = {};
+    DataBase = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'app-root',template:/*ion-inline-start:"C:\Users\Batatitas\Desktop\appPetShop\src\app\app.component.ts"*/'import { Component } from \'@angular/core\';\n\nimport { Platform } from \'ionic-angular\';\n\nimport { StatusBar } from \'@ionic-native/status-bar\';\n\nimport { SplashScreen } from \'@ionic-native/splash-screen\';\n\n\n\n\n\nimport { TabsControllerPage } from \'../pages/tabs-controller/tabs-controller\';\n\n\n\n\n\n\n\n@Component({\n\n  templateUrl: \'app.html\'\n\n})\n\nexport class MyApp {\n\n  \n\n  rootPage:any = TabsControllerPage;\n\n\n\n  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {\n\n    platform.ready().then(() => {\n\n      // Okay, so the platform is ready and our plugins are available.\n\n      // Here you can do any higher level native things you might need.\n\n      statusBar.styleDefault();\n\n      splashScreen.hide();\n\n    });\n\n  }\n\n  \n\n}\n\n'/*ion-inline-end:"C:\Users\Batatitas\Desktop\appPetShop\src\app\app.component.ts"*/
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__ionic_storage_angular__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ionic_storage_angular__["b" /* Storage */]) === "function" && _a || Object])
+    ], DataBase);
+    return DataBase;
+    var _a;
+}());
+
+//# sourceMappingURL=db.js.map
+
+/***/ }),
+
+/***/ 110:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConfiguraEsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
@@ -16,7 +160,7 @@ webpackJsonp([0],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__finalizar_finalizar__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__boleto_boleto__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__cadastrar_cadastrar__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__conta_conta__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__conta_conta__ = __webpack_require__(212);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -114,7 +258,7 @@ var ConfiguraEsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 118:
+/***/ 121:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -127,7 +271,7 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 118;
+webpackEmptyAsyncContext.id = 121;
 
 /***/ }),
 
@@ -385,7 +529,7 @@ var CarrinhoPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__finalizar_finalizar__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__inicio_inicio__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__boleto_boleto__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__db__ = __webpack_require__(283);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__db__ = __webpack_require__(109);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -411,8 +555,6 @@ var ProdutoPage = /** @class */ (function () {
     }
     ProdutoPage_1 = ProdutoPage;
     ProdutoPage.prototype.init = function () {
-        var produto = __WEBPACK_IMPORTED_MODULE_8__db__["a" /* DataBase */].detalharProduto();
-        this.nomeDoProduto = produto.nome;
     };
     ProdutoPage.prototype.goToCarrinho = function (params) {
         if (!params)
@@ -422,6 +564,7 @@ var ProdutoPage = /** @class */ (function () {
     ProdutoPage.prototype.goToProduto = function (params) {
         if (!params)
             params = {};
+        __WEBPACK_IMPORTED_MODULE_8__db__["a" /* DataBase */].detalharProduto(this.nomeDoProduto);
         this.navCtrl.push(ProdutoPage_1);
     };
     ProdutoPage.prototype.goToPagamento = function (params) {
@@ -451,32 +594,15 @@ var ProdutoPage = /** @class */ (function () {
     };
     ProdutoPage = ProdutoPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-produto',template:/*ion-inline-start:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\produto\produto.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Produto\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding id="page8">\n\n  <img src="assets/img/f9zxKQJUR6CChhkaZDmp_racao.jpg" style="display:block;width:70%;height:auto;margin-left:auto;margin-right:auto;" />\n\n  <h1 id="produto-heading1" style="color:#000000;text-align:center;">\n\n    Ração Pedigree\n\n  </h1>\n\n  <h1 id="produto-heading2" style="color:#ABFFAA;text-align:center;">\n\n    R$ 49,90\n\n  </h1>\n\n  <div class="spacer" style="width:300px;height:58px;" id="produto-spacer6"></div>\n\n  <div id="produto-markdown1" class="show-list-numbers-and-dots">\n\n    <p style="color:#000000;">\n\n      descrição:\n\n    </p>\n\n  </div>\n\n  <div id="produto-markdown2" style="text-align:center;" class="show-list-numbers-and-dots">\n\n    <p style="color:#000000;">\n\n      Idade: Adulto\n\n    </p>\n\n    <p style="color:#000000;">\n\n      Linha: Premium\n\n    </p>\n\n    <p style="color:#000000;">\n\n      Pet: Cachorros\n\n    </p>\n\n    <p style="color:#000000;">\n\n      Porte de Raça: Pequeno\n\n    </p>\n\n    <p style="color:#000000;">\n\n      Sabor: Carne\n\n    </p>\n\n    <p style="color:#000000;">\n\n      Tipo: Ração seca\n\n    </p>\n\n    <p style="color:#000000;">\n\n      Apresentação: 1kg, 3kg, 10,1kg, 15kg e 20kg\n\n    </p>\n\n    <p style="color:#000000;">\n\n      Indicação: Alimentação diária de cães adultos de pequeno porte\n\n    </p>\n\n  </div>\n\n  <div class="spacer" style="width:300px;height:56px;" id="produto-spacer8"></div>\n\n  <button id="produto-button5" ion-button color="energized" block on-click="goToCarrinho()">\n\n    Adicionar ao carrinho\n\n  </button>\n\n  <div class="spacer" style="width:300px;height:100px;" id="produto-spacer7"></div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\produto\produto.html"*/
+            selector: 'page-produto',template:/*ion-inline-start:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\produto\produto.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Produto\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding id="page8">\n\n  <img src="assets/img/f9zxKQJUR6CChhkaZDmp_racao.jpg" style="display:block;width:70%;height:auto;margin-left:auto;margin-right:auto;" />\n\n  <h1 id="produto-heading1" style="color:#000000;text-align:center;">\n\n    {{nomeDoProduto}}\n\n  </h1>\n\n  <h1 id="produto-heading2" style="color:#ABFFAA;text-align:center;">\n\n    {{valorDoProduto}}\n\n  </h1>\n\n  <div class="spacer" style="width:300px;height:58px;" id="produto-spacer6"></div>\n\n  <div id="produto-markdown1" class="show-list-numbers-and-dots">\n\n    <p style="color:#000000;">\n\n      descrição:\n\n    </p>\n\n  </div>\n\n  <div id="produto-markdown2" style="text-align:center;" class="show-list-numbers-and-dots">\n\n  </div>\n\n  <div class="spacer" style="width:300px;height:56px;" id="produto-spacer8"></div>\n\n  <button id="produto-button5" ion-button color="energized" block on-click="goToCarrinho()">\n\n    Adicionar ao carrinho\n\n  </button>\n\n  <div class="spacer" style="width:300px;height:100px;" id="produto-spacer7"></div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\produto\produto.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object])
     ], ProdutoPage);
     return ProdutoPage;
-    var ProdutoPage_1;
+    var ProdutoPage_1, _a;
 }());
 
 //# sourceMappingURL=produto.js.map
-
-/***/ }),
-
-/***/ 159:
-/***/ (function(module, exports) {
-
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncatched exception popping up in devtools
-	return Promise.resolve().then(function() {
-		throw new Error("Cannot find module '" + req + "'.");
-	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 159;
 
 /***/ }),
 
@@ -566,6 +692,23 @@ var PagamentoPage = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 163:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 163;
+
+/***/ }),
+
 /***/ 17:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -579,7 +722,8 @@ var PagamentoPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__carrinho_carrinho__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pagamento_pagamento__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__boleto_boleto__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__adicionar_cart_o_adicionar_cart_o__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__adicionar_cart_o_adicionar_cart_o__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__db__ = __webpack_require__(109);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -598,13 +742,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var CartOPage = /** @class */ (function () {
-    // this tells the tabs component which Pages
-    // should be each tab's root Page
     function CartOPage(navCtrl) {
         this.navCtrl = navCtrl;
+        this.init();
     }
     CartOPage_1 = CartOPage;
+    CartOPage.prototype.init = function () {
+        var cartao = __WEBPACK_IMPORTED_MODULE_9__db__["a" /* DataBase */].listarCartoes();
+        this.numeroDoCartao = cartao.numero;
+    };
     CartOPage.prototype.goToFinalizar = function (params) {
         if (!params)
             params = {};
@@ -647,7 +795,7 @@ var CartOPage = /** @class */ (function () {
     };
     CartOPage = CartOPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cart-o',template:/*ion-inline-start:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\cart-o\cart-o.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Cartão\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding id="page10">\n\n  <img src="assets/img/jBFmrEElSwOrNjZkDtqF_bank_card.jpg" style="display:block;width:70%;height:auto;margin-left:auto;margin-right:auto;" />\n\n  <div class="spacer" style="width:300px;height:29px;" id="cartO-spacer14"></div>\n\n  <ion-card id="cartO-card24">\n\n    <ion-list>\n\n      <ion-item color="none" on-click="goToFinalizar()" id="cartO-list-item28">\n\n        Carão de Crédito\n\n        <ion-note item-right></ion-note>\n\n        <ion-icon name="card" item-right></ion-icon>\n\n      </ion-item>\n\n    </ion-list>\n\n  </ion-card>\n\n  <button id="cartO-button6" ion-button clear color="gray" block small>\n\n    <ion-icon name="add-circle" onclick="this.goToAdicionarCartao"></ion-icon>\n\n    Adicionar novo cartão\n\n  </button>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\cart-o\cart-o.html"*/
+            selector: 'page-cart-o',template:/*ion-inline-start:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\cart-o\cart-o.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Cartão\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding id="page10">\n\n  <img src="assets/img/jBFmrEElSwOrNjZkDtqF_bank_card.jpg" style="display:block;width:70%;height:auto;margin-left:auto;margin-right:auto;" />\n\n  <div class="spacer" style="width:300px;height:29px;" id="cartO-spacer14"></div>\n\n  <ion-card id="cartO-card24">\n\n    <ion-list>\n\n      <ion-item color="none" on-click="goToFinalizar()" id="cartO-list-item28">\n\n        {{numeroDoCartao}}\n\n        <ion-note item-right></ion-note>\n\n        <ion-icon name="card" item-right></ion-icon>\n\n      </ion-item>\n\n    </ion-list>\n\n  </ion-card>\n\n  <button id="cartO-button6" ion-button clear color="gray" block small>\n\n    <ion-icon name="add-circle" onclick="this.goToAdicionarCartao"></ion-icon>\n\n    {{adicionarNovoCartao}}\n\n  </button>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\cart-o\cart-o.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], CartOPage);
@@ -831,7 +979,7 @@ var BoletoPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 203:
+/***/ 207:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -840,7 +988,7 @@ var BoletoPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inicio_inicio__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__carrinho_carrinho__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__configura_es_configura_es__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__configura_es_configura_es__ = __webpack_require__(110);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -877,7 +1025,7 @@ var TabsControllerPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 204:
+/***/ 208:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -963,14 +1111,14 @@ var AdicionarCartOPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 208:
+/***/ 212:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__configura_es_configura_es__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__configura_es_configura_es__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__inicio_inicio__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__produto_produto__ = __webpack_require__(15);
@@ -1075,13 +1223,13 @@ var ContaPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 209:
+/***/ 213:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(234);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1089,20 +1237,20 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 232:
+/***/ 234:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(276);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_inicio_inicio__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_carrinho_carrinho__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_configura_es_configura_es__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_controller_tabs_controller__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_page_page__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_configura_es_configura_es__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_controller_tabs_controller__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_page_page__ = __webpack_require__(286);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_cadastrar_cadastrar__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_produto_produto__ = __webpack_require__(15);
@@ -1110,13 +1258,13 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_cart_o_cart_o__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_finalizar_finalizar__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_boleto_boleto__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_adicionar_cart_o_adicionar_cart_o__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_pesquisar_pesquisar__ = __webpack_require__(286);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_conta_conta__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_status_bar__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_splash_screen__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_storage_angular__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_services_firebase_services_firebase__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_adicionar_cart_o_adicionar_cart_o__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_pesquisar_pesquisar__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_conta_conta__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_status_bar__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_splash_screen__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_storage_angular__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_services_firebase_services_firebase__ = __webpack_require__(288);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1174,7 +1322,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: []
                 }),
-                __WEBPACK_IMPORTED_MODULE_21__ionic_storage_angular__["a" /* IonicStorageModule */].forRoot()
+                __WEBPACK_IMPORTED_MODULE_21__ionic_storage_angular__["a" /* IonicStorageModule */].forRoot(),
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
             entryComponents: [
@@ -1210,16 +1358,16 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 275:
+/***/ 276:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_controller_tabs_controller__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_controller_tabs_controller__ = __webpack_require__(207);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1256,137 +1404,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 283:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataBase; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage_angular__ = __webpack_require__(205);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-
-
-var DataBase = /** @class */ (function () {
-    function DataBase(storage) {
-        this.storage = storage;
-        this._storage = null;
-        this.init();
-    }
-    DataBase.prototype.init = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var storage;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.storage.create()];
-                    case 1:
-                        storage = _a.sent();
-                        this._storage = storage;
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    // Create and expose methods that users of this service can
-    // call, for example:
-    DataBase.prototype.set = function (key, value) {
-        this._storage.set(key, value);
-    };
-    DataBase.prototype.verificaLogin = function (user, pass) {
-        return true;
-    };
-    DataBase.prototype.cadastrarUsuario = function (user, email, pass) {
-    };
-    // carrinho
-    DataBase.prototype.listarCarrinho = function () {
-        //servidor local
-        return [
-            { urlImagem: '', nome: '', preco: '' }
-        ];
-    };
-    // carrinho
-    DataBase.prototype.adicionarCarrinho = function (produto) {
-    };
-    //pesquisar
-    DataBase.prototype.listarPesquisa = function (filtro) {
-        return [
-            { urlImagem: '', nome: '', preco: '' }
-        ];
-    };
-    //adicionarCartao
-    DataBase.prototype.adicionarCartao = function (nome, numero, validade, ccv) {
-    };
-    //cartoes
-    DataBase.prototype.listarCartoes = function () {
-    };
-    //produto
-    DataBase.prototype.detalharProduto = function (id) {
-        asa;
-        return { urlImage: '', nome: '', preco: '', descricao: '' };
-    };
-    DataBase.perfil = {
-        urlImage: '',
-        nome: '',
-        endereco: '',
-        dataNasc: ''
-    };
-    DataBase = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'app-root',template:/*ion-inline-start:"C:\Users\Batatitas\Desktop\appPetShop\src\app\app.component.ts"*/'import { Component } from \'@angular/core\';\n\nimport { Platform } from \'ionic-angular\';\n\nimport { StatusBar } from \'@ionic-native/status-bar\';\n\nimport { SplashScreen } from \'@ionic-native/splash-screen\';\n\n\n\n\n\n\n\nimport { TabsControllerPage } from \'../pages/tabs-controller/tabs-controller\';\n\n\n\n\n\n\n\n@Component({\n\n  templateUrl: \'app.html\'\n\n})\n\nexport class MyApp {\n\n  \n\n  rootPage:any = TabsControllerPage;\n\n\n\n  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {\n\n    platform.ready().then(() => {\n\n      // Okay, so the platform is ready and our plugins are available.\n\n      // Here you can do any higher level native things you might need.\n\n      statusBar.styleDefault();\n\n      splashScreen.hide();\n\n    });\n\n  }\n\n  \n\n}\n\n'/*ion-inline-end:"C:\Users\Batatitas\Desktop\appPetShop\src\app\app.component.ts"*/
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__ionic_storage_angular__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ionic_storage_angular__["b" /* Storage */]) === "function" && _a || Object])
-    ], DataBase);
-    return DataBase;
-    var _a;
-}());
-
-//# sourceMappingURL=db.js.map
-
-/***/ }),
-
-/***/ 285:
+/***/ 286:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1423,7 +1441,7 @@ var PagePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 286:
+/***/ 287:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1456,11 +1474,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var PesquisarPage = /** @class */ (function () {
-    // this tells the tabs component which Pages
-    // should be each tab's root Page
     function PesquisarPage(navCtrl) {
         this.navCtrl = navCtrl;
+        this.init();
     }
+    PesquisarPage.prototype.init = function () {
+        // let produto = DataBase.detalharProduto();
+        // this.nomeDoProduto = produto.nome;
+    };
     PesquisarPage.prototype.goToProduto = function (params) {
         if (!params)
             params = {};
@@ -1498,7 +1519,7 @@ var PesquisarPage = /** @class */ (function () {
     };
     PesquisarPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-pesquisar',template:/*ion-inline-start:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\pesquisar\pesquisar.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Pesquisar\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding id="page14">\n\n  <form id="pesquisar-form6">\n\n    <ion-searchbar placeholder="Pesquisar" name="" id="pesquisar-search2"></ion-searchbar>\n\n  </form>\n\n  <ion-card id="pesquisar-card211">\n\n    <ion-list>\n\n      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n\n        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n\n      </div>\n\n      <ion-list id="pesquisar-list6">\n\n        <ion-item color="none" on-click="goToProduto()" id="pesquisar-list-item81">\n\n          <ion-avatar item-left>\n\n            <img src="assets/img/JcOqvKalQCajqT2BbPMP_racao.jpg" />\n\n          </ion-avatar>\n\n          <h2>\n\n            Ração Pedigree\n\n          </h2>\n\n        </ion-item>\n\n      </ion-list>\n\n    </ion-list>\n\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\pesquisar\pesquisar.html"*/
+            selector: 'page-pesquisar',template:/*ion-inline-start:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\pesquisar\pesquisar.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Pesquisar\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding id="page14">\n\n  <form id="pesquisar-form6">\n\n    <ion-searchbar placeholder="Pesquisar" name="" id="pesquisar-search2"></ion-searchbar>\n\n  </form>\n\n  <ion-card id="pesquisar-card211">\n\n    <ion-list>\n\n      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">\n\n        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>\n\n      </div>\n\n      <ion-list id="pesquisar-list6">\n\n        <ion-item color="none" on-click="goToProduto()" id="pesquisar-list-item81">\n\n          <ion-avatar item-left>\n\n            <img src="assets/img/JcOqvKalQCajqT2BbPMP_racao.jpg" />\n\n          </ion-avatar>\n\n          <h2>\n\n            {{nomeDoProduto}}\n\n          </h2>\n\n        </ion-item>\n\n      </ion-list>\n\n    </ion-list>\n\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\pesquisar\pesquisar.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], PesquisarPage);
@@ -1509,12 +1530,12 @@ var PesquisarPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 287:
+/***/ 288:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServicesFirebaseProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(289);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1564,6 +1585,7 @@ var ServicesFirebaseProvider = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__finalizar_finalizar__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__boleto_boleto__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__cadastrar_cadastrar__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__db__ = __webpack_require__(109);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1573,6 +1595,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -1595,7 +1618,14 @@ var LoginPage = /** @class */ (function () {
     LoginPage.prototype.goToInicio = function (params) {
         if (!params)
             params = {};
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__inicio_inicio__["a" /* InicioPage */]);
+        var emailLogin = document.getElementById('emailLogin');
+        var senhaLogin = document.getElementById('senhaLogin');
+        if (emailLogin && senhaLogin) {
+            console.log(emailLogin.nodeValue, senhaLogin.nodeValue);
+            if (__WEBPACK_IMPORTED_MODULE_10__db__["a" /* DataBase */].verificaLogin(emailLogin.nodeValue, senhaLogin.nodeValue)) {
+                this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__inicio_inicio__["a" /* InicioPage */]);
+            }
+        }
     };
     LoginPage.prototype.goToProduto = function (params) {
         if (!params)
@@ -1639,12 +1669,12 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = LoginPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\login\login.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Login\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding id="page6">\n\n  <img src="assets/img/V3usKrbpRDqQd43qSuRY_petshop.jpg" style="display:block;width:40%;height:auto;margin-left:auto;margin-right:auto;" />\n\n  <form id="login-form1">\n\n    <div class="spacer" style="width:300px;height:35px;" id="login-spacer5"></div>\n\n    <ion-list id="login-list2">\n\n      <ion-item id="login-input1">\n\n        <ion-label stacked>\n\n          Email\n\n        </ion-label>\n\n        <ion-input type="email" placeholder="email@...." name="emailLogin"></ion-input>\n\n      </ion-item>\n\n      <ion-item id="login-input2">\n\n        <ion-label stacked>\n\n          Senha\n\n        </ion-label>\n\n        <ion-input type="password" placeholder="******" name="senhaLogin"></ion-input>\n\n      </ion-item>\n\n    </ion-list>\n\n    <div class="spacer" style="height:40px;" id="login-spacer2"></div>\n\n    <button id="login-button2" ion-button color="energized" block on-click="goToInicio()">\n\n      Entrar\n\n    </button>\n\n    <button id="login-button3" ion-button clear color="positive" block on-click="goToCadastrar()">\n\n      criar conta\n\n    </button>\n\n  </form>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\login\login.html"*/
+            selector: 'page-login',template:/*ion-inline-start:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\login\login.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Login\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding id="page6">\n\n  <img src="assets/img/V3usKrbpRDqQd43qSuRY_petshop.jpg" style="display:block;width:40%;height:auto;margin-left:auto;margin-right:auto;" />\n\n  <form id="login-form1">\n\n    <div class="spacer" style="width:300px;height:35px;" id="login-spacer5"></div>\n\n    <ion-list id="login-list2">\n\n      <ion-item id="login-input1">\n\n        <ion-label stacked>\n\n          Email\n\n        </ion-label>\n\n        <ion-input type="email" placeholder="email@...." id="emailLogin" id="loginUsuario"></ion-input>\n\n      </ion-item>\n\n      <ion-item id="login-input2">\n\n        <ion-label stacked>\n\n          Senha\n\n        </ion-label>\n\n        <ion-input type="password" placeholder="******" id="senhaLogin"></ion-input>\n\n      </ion-item>\n\n    </ion-list>\n\n    <div class="spacer" style="height:40px;" id="login-spacer2"></div>\n\n    <button id="login-button2" ion-button color="energized" block on-click="goToInicio()">\n\n      Entrar\n\n    </button>\n\n    <button id="login-button3" ion-button clear color="positive" block on-click="goToCadastrar()">\n\n      criar conta\n\n    </button>\n\n  </form>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Batatitas\Desktop\appPetShop\src\pages\login\login.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object])
     ], LoginPage);
     return LoginPage;
-    var LoginPage_1;
+    var LoginPage_1, _a;
 }());
 
 //# sourceMappingURL=login.js.map
@@ -1751,5 +1781,5 @@ var CadastrarPage = /** @class */ (function () {
 
 /***/ })
 
-},[209]);
+},[213]);
 //# sourceMappingURL=main.js.map

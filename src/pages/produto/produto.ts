@@ -23,8 +23,7 @@ export class ProdutoPage {
     this.init();
   }
   init(){
-    let produto = DataBase.detalharProduto();
-    this.nomeDoProduto = produto.nome;
+    
   }
 
   goToCarrinho(params){
@@ -32,6 +31,7 @@ export class ProdutoPage {
     this.navCtrl.push(CarrinhoPage);
   }goToProduto(params){
     if (!params) params = {};
+    DataBase.detalharProduto(this.nomeDoProduto);
     this.navCtrl.push(ProdutoPage);
   }goToPagamento(params){
     if (!params) params = {};
