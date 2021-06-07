@@ -8,6 +8,7 @@ import { PagamentoPage } from '../pagamento/pagamento';
 import { CartOPage } from '../cart-o/cart-o';
 import { FinalizarPage } from '../finalizar/finalizar';
 import { BoletoPage } from '../boleto/boleto';
+import { DataBase } from '../../db';
 @Component({
   selector: 'page-cadastrar',
   templateUrl: 'cadastrar.html'
@@ -17,8 +18,14 @@ export class CadastrarPage {
   // should be each tab's root Page
   constructor(public navCtrl: NavController) {
   }
+  
+  emailCadastro: string;
+  nomeCadastro: string;
+  senha: string;
+
   goToLogin(params){
     if (!params) params = {};
+    DataBase.cadastrarUsuario(this.emailCadastro, this.nomeCadastro, this.senha)
     this.navCtrl.push(LoginPage);
   }goToInicio(params){
     if (!params) params = {};

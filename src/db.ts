@@ -55,7 +55,7 @@ export class DataBase {
 
   // carrinho
   static listarCarrinho(){
-    //servidor local
+    
     return [
       {urlImagem: '', nome: '', preco: ''}
     ]
@@ -80,8 +80,10 @@ export class DataBase {
 
   }
   //produto
-  static detalharProduto(tipo: string, id: string){
-    return this.db["produtos"][tipo][id];
+  static detalharProduto(name:string){
+    return this.db["produtos"].forEach(element => {
+        if(element[name]) return element;
+    });
   }
 
   static listarProdutos(){

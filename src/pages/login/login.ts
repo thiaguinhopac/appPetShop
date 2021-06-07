@@ -10,6 +10,7 @@ import { BoletoPage } from '../boleto/boleto';
 import { CadastrarPage } from '../cadastrar/cadastrar';
 import { DataBase } from '../../db';
 
+
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html'
@@ -18,19 +19,19 @@ export class LoginPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
   constructor(public navCtrl: NavController) {
-
+    
   }
   ngOnInit() {
-
+    
   }
   
+  emailLogin: string;
+  senhaLogin: string;
+
   goToInicio(params){
     if (!params) params = {};
-    var emailLogin = document.getElementById('emailLogin');
-    var senhaLogin = document.getElementById('senhaLogin');
-    if(emailLogin && senhaLogin){
-      console.log(emailLogin.nodeValue, senhaLogin.nodeValue);
-      if(DataBase.verificaLogin(emailLogin.nodeValue, senhaLogin.nodeValue)){
+    if(this.emailLogin && this.senhaLogin){
+      if(DataBase.verificaLogin(this.emailLogin, this.senhaLogin)){
         this.navCtrl.push(InicioPage);
       }
     }
