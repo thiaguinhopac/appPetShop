@@ -10,6 +10,7 @@ import { CartOPage } from '../cart-o/cart-o';
 import { FinalizarPage } from '../finalizar/finalizar';
 import { BoletoPage } from '../boleto/boleto';
 import { CadastrarPage } from '../cadastrar/cadastrar';
+import { DataBase } from '../../db'
 
 @Component({
   selector: 'page-conta',
@@ -21,9 +22,15 @@ export class ContaPage {
   nome: string;
   dataNasc: string;
   endereco: string;
-  
+
   constructor(public navCtrl: NavController) {
+    this.init();
   }
+
+  init(){
+
+  }
+  
   goToConfiguraEs(params){
     if (!params) params = {};
     this.navCtrl.push(ConfiguraEsPage);

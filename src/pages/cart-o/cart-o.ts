@@ -22,7 +22,6 @@ export class CartOPage {
   }
   init(){
     let cartao = DataBase.listarCartoes();
-    this.numeroDoCartao = cartao.numero;
   }
   goToFinalizar(params){
     if (!params) params = {};

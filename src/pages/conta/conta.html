@@ -14,19 +14,19 @@
       <ion-label>
         Nome
       </ion-label>
-      <ion-input type="text" placeholder={{nome}}></ion-input>
+      <ion-input type="text" placeholder={{nome}} [(ngModel)]="nome"></ion-input>
     </ion-item>
     <ion-item id="conta-input14">
       <ion-label>
         Endereço
       </ion-label>
-      <ion-input type="text" placeholder={{endereco}}></ion-input>
+      <ion-input type="text" placeholder={{endereco}} [(ngModel)]="endereco"></ion-input>
     </ion-item>
     <ion-item id="conta-input15">
       <ion-label>
         Nascimento
       </ion-label>
-      <ion-input type="date" placeholder={{dataNasc}}></ion-input>
+      <ion-input type="date" placeholder={{dataNasc}} [(ngModel)]="dataNasc"></ion-input>
     </ion-item>
   </ion-list>
   <button id="conta-button9" ion-button color="positive" block on-click="goToConfiguraEs()">

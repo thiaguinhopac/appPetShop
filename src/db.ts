@@ -55,7 +55,7 @@ export class DataBase {
 
   // carrinho
   static listarCarrinho(){
-    
+
     return [
       {urlImagem: '', nome: '', preco: ''}
     ]
@@ -66,8 +66,10 @@ export class DataBase {
   }
   //pesquisar
   static listarPesquisa(filtro: string){
-
     return [
+      {urlImagem: '', nome: '', preco: ''},
+      {urlImagem: '', nome: '', preco: ''},
+      {urlImagem: '', nome: '', preco: ''},
       {urlImagem: '', nome: '', preco: ''}
     ]
   }
