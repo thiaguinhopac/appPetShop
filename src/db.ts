@@ -102,13 +102,14 @@ export class DataBase {
 
   }
 
-  static listarPesquisa(filtro: string){
-    return [
-      {urlImagem: '', nome: '', preco: ''},
-      {urlImagem: '', nome: '', preco: ''},
-      {urlImagem: '', nome: '', preco: ''},
-      {urlImagem: '', nome: '', preco: ''}
-    ]
+  static listarPesquisa(){
+    let result = [];
+    for(let prodTitle in this.db["produtos"]){
+      for(let id in this.db["produtos"][prodTitle]){
+        result.push(this.db["produtos"][prodTitle][id].nome);
+      }
+    }
+    return result;
   }
 
   static adicionarCartao(nome: string, numero: string,validade: string,ccv: string){

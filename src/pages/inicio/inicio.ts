@@ -32,7 +32,7 @@ export class InicioPage {
   }
 
   initializeItems(){
-      this.items = ["Ram","gopi", "dravid"];
+      this.items = DataBase.listarPesquisa();
   }
 
   ngOnInit() {
@@ -50,12 +50,18 @@ export class InicioPage {
     this.sobre = aux1.desc;
   }
 
+  itemClick(ev: any){
+
+    
+
+  }
+
   getItems(ev: any) {
     // Reset items back to all of the items
     this.initializeItems();
 
     // set val to the value of the searchbar
-    const val = ev.target.value;
+    const val = ev.value;
 
     // if the value is an empty string don't filter the items
     if (val && val.trim() !== '') {

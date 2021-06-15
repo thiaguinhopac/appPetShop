@@ -11,7 +11,7 @@
   <form id="inicio-form5">
     <ion-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel" type="text" debounce="500" placeholder="Pesquisar" (ionChange)="getItems($event)"></ion-searchbar>
     <ion-list *ngIf="isItemAvailable">
-      <ion-item *ngFor="let item of items">{{ item }}</ion-item>
+      <ion-item *ngFor="let item of items" on-click="itemClick($event)">{{ item }}</ion-item>
     </ion-list>
   </form>
   <ion-card id="inicio-card" style="width: 90%;">
