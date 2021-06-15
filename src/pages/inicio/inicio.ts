@@ -6,6 +6,7 @@ import { PagamentoPage } from '../pagamento/pagamento';
 import { CartOPage } from '../cart-o/cart-o';
 import { FinalizarPage } from '../finalizar/finalizar';
 import { BoletoPage } from '../boleto/boleto';
+import { DataBase } from '../../db';
 
 
 @Component({
@@ -16,32 +17,12 @@ export class InicioPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
   listInicio = [
-    {image: '', name: ''},
-    {image: '', name: ''},
-    {image: '', name: ''},
-    {image: '', name: ''},
-    {image: '', name: ''},
-    {image: '', name: ''},
-    {image: '', name: ''},
-    {image: '', name: ''},
-    {image: '', name: ''},
   ];
-
-  listLoc = [
-  "São Paulo São Paulo",
-  "Rio de Janeiro Rio de Janeiro",
-  "Brasília Distrito Federal",
-  "Salvador Bahia Bahia",
-  "Fortaleza Ceará",
-  "Belo Horizonte Minas Gerais",
-  "Manaus Amazonas",
-  "Curitiba Paraná",
-  "Recife Pernambuco",
-  "Goiânia Goiás",
-  "Belém Pará Pará",
-  "Porto Alegre Rio Grande do Sul",
-  "Guarulhos São Paulo"
-  ];
+  
+  sobre : String;
+  listLoc = DataBase.getLocals();
+  isItemAvailable = false;
+  items = [];
 
   constructor(public navCtrl: NavController) {
   }
@@ -50,26 +31,46 @@ export class InicioPage {
 
   }
 
-  ngOnInit() {
-    this.listInicio[0].image = "assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg";
-    this.listInicio[0].name = "TESTE";
-    this.listInicio[1].image = "assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg";
-    this.listInicio[1].name = "TESTE";
-    this.listInicio[2].image = "assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg";
-    this.listInicio[2].name = "TESTE";
-    this.listInicio[3].image = "assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg";
-    this.listInicio[3].name = "TESTE";
-    this.listInicio[4].image = "assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg";
-    this.listInicio[4].name = "TESTE";
-    this.listInicio[5].image = "assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg";
-    this.listInicio[5].name = "TESTE";
-    this.listInicio[6].image = "assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg";
-    this.listInicio[6].name = "TESTE";
-
-    
+  initializeItems(){
+      this.items = ["Ram","gopi", "dravid"];
   }
+
+  ngOnInit() {
+
+    let aux = DataBase.listarProdutos();
+    console.log(aux);
+    for(let name in aux){
+      for(let element in aux[name]) {
+        let ful = aux[name][element];
+        this.listInicio.push({name:ful.nome, image: ful.urlImage});
+     }
+    }
+
+    let aux1 = DataBase.getAbout();
+    this.sobre = aux1.desc;
+  }
+
+  getItems(ev: any) {
+    // Reset items back to all of the items
+    this.initializeItems();
+
+    // set val to the value of the searchbar
+    const val = ev.target.value;
+
+    // if the value is an empty string don't filter the items
+    if (val && val.trim() !== '') {
+        this.isItemAvailable = true;
+        this.items = this.items.filter((item) => {
+            return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        })
+    } else {
+        this.isItemAvailable = false;
+    }
+  }
+
   goToProduto(params){
     if (!params) params = {};
+    ProdutoPage.id = params[0];
     this.navCtrl.push(ProdutoPage);
   }goToCarrinho(params){
     if (!params) params = {};

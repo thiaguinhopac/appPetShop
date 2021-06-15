@@ -20,15 +20,18 @@ export class ContaPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
   nome: string;
-  dataNasc: string;
-  endereco: string;
+  email: string;
+  urlImage: string;
 
   constructor(public navCtrl: NavController) {
     this.init();
   }
 
   init(){
-
+    var aux = DataBase.getProfile();
+    this.nome = aux['nome'];
+    this.email = DataBase.currentUser;
+    this.urlImage = aux['urlImagem'];
   }
   
   goToConfiguraEs(params){

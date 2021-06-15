@@ -21,6 +21,8 @@ export class ProdutoPage {
   preco: string;
   descricao: string;
 
+  static id = "";
+
   constructor(public navCtrl: NavController) {
     this.init();
   }

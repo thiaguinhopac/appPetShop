@@ -9,7 +9,10 @@
   
   <img src="assets/img/Pi672XjRcuQYSxGVYuWF_petshop.jpg" style="display:block;width:30%;height:auto;margin-left:auto;margin-right:auto;" />
   <form id="inicio-form5">
-    <ion-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel" placeholder="Pesquisar" name="" id="inicio-search1" animated></ion-searchbar>
+    <ion-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel" type="text" debounce="500" placeholder="Pesquisar" (ionChange)="getItems($event)"></ion-searchbar>
+    <ion-list *ngIf="isItemAvailable">
+      <ion-item *ngFor="let item of items">{{ item }}</ion-item>
+    </ion-list>
   </form>
   <ion-card id="inicio-card" style="width: 90%;">
     <div class="spacer" style="width:300px;height:30px;" id="cadastrar-spacer4"></div>
@@ -46,13 +49,7 @@
       <div class="spacer" style="width:300px;height:30px;" id="cadastrar-spacer4"></div>
       <div id="inicio-markdown21" class="show-list-numbers-and-dots">
         <p style="color:#000000;">
-          Definimos um tipo elevado de tratamento com seu pet, tanto em produtos quanto em higiene ( tosa, banho, etc. ).
-        </p>
-        <p style="color:#000000;">
-          Criamos uma logistica unica que nos traz a certeza de que seremos o destaque em termo de eficiencia e qualidade.
-        </p>
-        <p style="color:#000000;">
-          Fundada em 2003, cada vez vem ganhando mais forma dentro do mercado, tem se destacado como uma das principais pet shops em questão a satisfação do cliente
+          {{sobre}}
         </p>
       </div>
       <img src="assets/img/jKWqyoBEQrarD9AgcljT_loja.jpg" />

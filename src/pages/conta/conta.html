@@ -7,26 +7,20 @@
 </ion-header>
 <ion-content padding id="page15">
   <div class="spacer" style="width:300px;height:19px;" id="conta-spacer30"></div>
-  <img src="assets/img/pOQKYujfS2WBxYvlBmkt_person.jpg" style="display:block;width:50%;height:auto;margin-left:auto;margin-right:auto;" />
+  <img src={{urlImage}} style="display:block;width:50%;height:auto;margin-left:auto;margin-right:auto;" />
   <div class="spacer" style="width:300px;height:50px;" id="conta-spacer29"></div>
   <ion-list id="conta-list8">
     <ion-item id="conta-input13">
       <ion-label>
         Nome
       </ion-label>
-      <ion-input type="text" placeholder={{nome}} [(ngModel)]="nome"></ion-input>
+      <ion-input type="text" placeholder={{nome}} [(ngModel)]="nome">{{nome}}</ion-input>
     </ion-item>
     <ion-item id="conta-input14">
       <ion-label>
-        Endereço
+        Email
       </ion-label>
-      <ion-input type="text" placeholder={{endereco}} [(ngModel)]="endereco"></ion-input>
-    </ion-item>
-    <ion-item id="conta-input15">
-      <ion-label>
-        Nascimento
-      </ion-label>
-      <ion-input type="date" placeholder={{dataNasc}} [(ngModel)]="dataNasc"></ion-input>
+      <ion-input type="text" placeholder={{email}} [(ngModel)]="email">{{email}}</ion-input>
     </ion-item>
   </ion-list>
   <button id="conta-button9" ion-button color="positive" block on-click="goToConfiguraEs()">

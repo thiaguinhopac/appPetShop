@@ -7,6 +7,8 @@ import { FinalizarPage } from '../finalizar/finalizar';
 import { InicioPage } from '../inicio/inicio';
 import { BoletoPage } from '../boleto/boleto';
 import { IonicNativePlugin } from '@ionic-native/core';
+import { DataBase } from '../../db';
+import { format } from 'path';
 
 @Component({
   selector: 'page-carrinho',
@@ -17,38 +19,27 @@ export class CarrinhoPage implements OnInit {
   // should be each tab's root Page
   
   items: Map<ImageBitmap,string>;
+  urlImage: string;
+  totalValor: string;
+  preco: string;
 
-  listCarrinho = [
-    {image: '', name: ''},
-    {image: '', name: ''},
-    {image: '', name: ''},
-    {image: '', name: ''},
-    {image: '', name: ''},
-    {image: '', name: ''},
-    {image: '', name: ''},
-    {image: '', name: ''},
-    {image: '', name: ''},
-  ]
+  listCarrinho = [];
+
   constructor(public navCtrl: NavController) {
 
   }
+
   ngOnInit() {
-    this.listCarrinho[0].image = "assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg";
-    this.listCarrinho[0].name = "TESTE";
-    this.listCarrinho[1].image = "assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg";
-    this.listCarrinho[1].name = "TESTE";
-    this.listCarrinho[2].image = "assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg";
-    this.listCarrinho[2].name = "TESTE";
-    this.listCarrinho[3].image = "assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg";
-    this.listCarrinho[3].name = "TESTE";
-    this.listCarrinho[4].image = "assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg";
-    this.listCarrinho[4].name = "TESTE";
-    this.listCarrinho[5].image = "assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg";
-    this.listCarrinho[5].name = "TESTE";
-    this.listCarrinho[6].image = "assets/img/iyzG1s1SRVSImOybwhYg_racao.jpg";
-    this.listCarrinho[6].name = "TESTE";
-    
+    this.urlImage = DataBase.getIconCart();
+    let aux = DataBase.listarCarrinho();
+    let preco = parseFloat(this.totalValor) > 0 ? parseFloat(this.totalValor) : 0.0;
+    for(let element in aux){
+      this.listCarrinho.push({name: aux[element].nome, image: aux[element].urlImage, preco: aux[element].preco});
+      preco += parseFloat(aux[element].preco.replace(',','.'));
+    }
+    this.totalValor =  (Math.round(preco*100)/100).toString();
   }
+
   goToProduto(params){
     if (!params) params = {};
     this.navCtrl.push(ProdutoPage);
@@ -70,7 +61,5 @@ export class CarrinhoPage implements OnInit {
   }goToBoleto(params){
     if (!params) params = {};
     this.navCtrl.push(BoletoPage);
-  }
-
-  
+  }  
 }

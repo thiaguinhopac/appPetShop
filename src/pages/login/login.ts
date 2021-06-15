@@ -35,29 +35,8 @@ export class LoginPage {
         this.navCtrl.push(InicioPage);
       }
     }
-  }goToProduto(params){
-    if (!params) params = {};
-    this.navCtrl.push(ProdutoPage);
-  }goToCarrinho(params){
-    if (!params) params = {};
-    this.navCtrl.push(CarrinhoPage);
-  }goToPagamento(params){
-    if (!params) params = {};
-    this.navCtrl.push(PagamentoPage);
-  }goToCartO(params){
-    if (!params) params = {};
-    this.navCtrl.push(CartOPage);
-  }goToFinalizar(params){
-    if (!params) params = {};
-    this.navCtrl.push(FinalizarPage);
-  }goToBoleto(params){
-    if (!params) params = {};
-    this.navCtrl.push(BoletoPage);
   }goToCadastrar(params){
     if (!params) params = {};
     this.navCtrl.push(CadastrarPage);
-  }goToLogin(params){
-    if (!params) params = {};
-    this.navCtrl.push(LoginPage);
   }
 }
