@@ -31,14 +31,15 @@ export class ProdutoPage {
 
   init(){
     var aux = DataBase.detalharProduto(ProdutoPage.nome, ProdutoPage.id);
-    this.nomeDoProduto = aux.nome;
-    this.valorDoProduto = aux.preco;
-    this.urlImage = aux.urlImage;
-    this.descricao = aux.descricao;
+    this.nomeDoProduto = aux['nome'];
+    this.valorDoProduto = aux['preco'];
+    this.urlImage = aux['urlImage'];
+    this.descricao = aux['descricao'];
   }
 
   goToCarrinho(params){
     if (!params) params = {};
+    //DataBase.adicionarCarrinho(this.nomeDoProduto)
     this.navCtrl.push(CarrinhoPage);
   }goToProduto(params){
     if (!params) params = {};

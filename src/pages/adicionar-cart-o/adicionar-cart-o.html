@@ -13,19 +13,19 @@
       <ion-label stacked>
         Nome impresso no cartão
       </ion-label>
-      <ion-input type="text" placeholder="Matailda Venila"></ion-input>
+      <ion-input type="text" placeholder="Matailda Venila" name="nome" [(ngModel)]="nome"></ion-input>
     </ion-item>
     <ion-item id="adicionarCartO-input10">
       <ion-label stacked>
         Numero do cartão
       </ion-label>
-      <ion-input type="number" placeholder="5505 5055 0055 5500"></ion-input>
+      <ion-input type="number" placeholder="5505 5055 0055 5500" name="numero" [(ngModel)]="numero"></ion-input>
     </ion-item>
     <ion-item id="adicionarCartO-input11">
       <ion-label stacked>
         Validade
       </ion-label>
-      <ion-input type="date" placeholder=""></ion-input>
+      <ion-input type="date" placeholder="" name="validade" [(ngModel)]="validade"></ion-input>
     </ion-item>
     <div class="spacer" style="width:300px;height:52px;" id="adicionarCartO-spacer21"></div>
     <button id="adicionarCartO-button10" ion-button color="energized" block on-click="goToCartO()">

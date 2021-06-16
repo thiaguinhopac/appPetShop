@@ -10,7 +10,7 @@
   <div class="spacer" style="width:300px;height:26px;" id="carrinho-spacer1"></div>
   <h4>Produtos</h4>
   <div id="carrinho-container1" style="overflow-y: auto;height: 50%;">
-    <ion-list id="carrinho-list1" *ngFor="let prod of listCarrinho; let i=index" style="height: min-content;">
+    <ion-list id="carrinho-list1" name="listCarrinho" *ngFor="let prod of listCarrinho; let i=index" style="height: min-content;">
       <ion-item-sliding>
         <ion-item color="none" on-click="goToProduto()" id="carrinho-list-item7" >
           <ion-avatar item-left>
@@ -20,9 +20,12 @@
             {{prod.name}}
           </h2>
           <h3 style="text-align:center;">R$ {{prod.preco}}</h3>
+          <ion-icon name="remove-circle-outline"></ion-icon>
         </ion-item>
         <ion-item-options side="left">
-          <button ion-button color="light"></button>
+          <button ion-button color="light" on-click="addItem($event)"></button>
+          <h3 style="text-align:center;">{{prod.qtd}}</h3>
+          <button ion-button color="light" on-click="removeItem($event)"></button>
         </ion-item-options>
       </ion-item-sliding>
     </ion-list>

@@ -43,11 +43,11 @@ export class DataBase {
     "carrinho" : {
         "icone": "assets/img/knTzFWINROSD2JgCRu5R_Bispg5DQCyOby9869Wvj_carrinho_de_compras.jpg",
         "produtos":{
-          "antipulgas" : ["0", "1"]
+          "antipulgas" : [{id:"0", qtd : 1}, {id:"1", qtd : 1}]
         } 
     },
     "cartao" : [
-        {"nome": "Teste", "numero": "055500555055","validade": "12/27","ccv": "157"}
+        {"nome": "Teste", "numero": "055500555055","validade": "12/27"}
     ]
   };
 
@@ -87,9 +87,9 @@ export class DataBase {
   static listarCarrinho(){
     let result = [];
     for(let produto in this.db["carrinho"]['produtos']){
-      this.db['carrinho']['produtos'][produto].forEach(element => {
-        result.push(this.db['produtos'][produto][element]);
-      });
+      for(let res in this.db['carrinho']['produtos'][produto]){
+        result.push({prod:this.db.produtos[produto][res],qtd:this.db['carrinho']['produtos'][produto][res]['qtd']});
+      }
     }
     return result;
   }
@@ -98,8 +98,43 @@ export class DataBase {
     return this.db['carrinho'].icone;
   }
 
-  static adicionarCarrinho(produto: JSON){
+  static adicionarCarrinho(nome){
+    for(let id in this.db.produtos){
+      for(let nm in this.db.produtos[id]){
+          if(this.db.produtos[id][nm].nome == nome){
+            this.db.carrinho.produtos[id][nm].id = nm;
+            this.db.carrinho.produtos[id][nm].qtd = 1;
+          }
+      }
+    }
+  }
 
+  static removerCarrinho(produto){
+    this.db['carrinho'].produtos
+  }
+
+  static addQtdCarrinho(nome){
+    for(let id in this.db.produtos){
+      for(let nm in this.db.produtos[id]){
+        if(this.db.produtos[id][nm].nome == nome){
+          this.db.produtos[id][nm].qtd++;
+        }
+      }
+    }
+  }
+
+  static removeQtdCarrinho(nome){
+    for(let id in this.db.produtos){
+      for(let nm in this.db.produtos[id]){
+        if(this.db.produtos[id][nm].nome == nome){
+          if(this.db.produtos[id][nm].qtd <= 1){
+            delete this.db.produtos[id][nm];
+          } else {
+            this.db.produtos[id][nm].qtd--;
+          }
+        }
+      }
+    }
   }
 
   static listarPesquisa(){
@@ -124,12 +159,16 @@ export class DataBase {
     return result;
   }
 
-  static adicionarCartao(nome: string, numero: string,validade: string,ccv: string){
+  static adicionarCartao(nome: string, numero: string,validade: string){
+    this.db['cartao'].push({"nome": nome, "numero": numero,"validade": validade})
+  }
+
+  static removerCartao(numero: string){
 
   }
   
   static listarCartoes(){
-
+    return this.db.cartao;
   }
   
   static detalharProduto(name:string, id: string){

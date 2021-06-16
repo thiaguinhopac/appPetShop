@@ -33,11 +33,21 @@ export class CarrinhoPage implements OnInit {
     this.urlImage = DataBase.getIconCart();
     let aux = DataBase.listarCarrinho();
     let preco = parseFloat(this.totalValor) > 0 ? parseFloat(this.totalValor) : 0.0;
-    for(let element in aux){
-      this.listCarrinho.push({name: aux[element].nome, image: aux[element].urlImage, preco: aux[element].preco});
-      preco += parseFloat(aux[element].preco.replace(',','.'));
-    }
+  
+    aux.forEach(element=>{
+      this.listCarrinho.push({name: element.prod.nome, image: element.prod.urlImage, preco: element.prod.preco, qtd: element['qtd']});
+      preco += parseFloat(element.prod.preco);
+    })
+  
     this.totalValor =  (Math.round(preco*100)/100).toString();
+  }
+
+  removeItem(ev: any){
+
+  }
+
+  addItem(ev: any){
+    
   }
 
   goToProduto(params){

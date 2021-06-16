@@ -15,14 +15,23 @@ import { DataBase } from '../../db';
 })
 export class CartOPage {
   
-  numeroDoCartao: string;
+  listCard = [];
 
   constructor(public navCtrl: NavController) {
     this.init();
   }
   init(){
     let cartao = DataBase.listarCartoes();
+    cartao.forEach(element => {
+      let vr = element['numero'];
+      this.listCard.push({num: vr.substr(0,4) + " " + vr.substr(4,4) + " " + vr.substr(8,4)});
+    })
   }
+
+  removeCartao(ev: any){
+    
+  }
+
   goToFinalizar(params){
     if (!params) params = {};
     this.navCtrl.push(FinalizarPage);
