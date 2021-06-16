@@ -242,9 +242,9 @@ var InicioPage = /** @class */ (function () {
     InicioPage.prototype.ngOnInit = function () {
         var aux = __WEBPACK_IMPORTED_MODULE_8__db__["a" /* DataBase */].listarProdutos();
         console.log(aux);
-        for (var name_1 in aux) {
-            for (var element in aux[name_1]) {
-                var ful = aux[name_1][element];
+        for (var name in aux) {
+            for (var element in aux[name]) {
+                var ful = aux[name][element];
                 this.listInicio.push({ name: ful.nome, image: ful.urlImage, id: element });
             }
         }
@@ -252,6 +252,9 @@ var InicioPage = /** @class */ (function () {
         this.sobre = aux1.desc;
     };
     InicioPage.prototype.itemClick = function (ev) {
+        __WEBPACK_IMPORTED_MODULE_2__produto_produto__["a" /* ProdutoPage */].id = __WEBPACK_IMPORTED_MODULE_8__db__["a" /* DataBase */].getId(ev.currentTarget.innerText);
+        __WEBPACK_IMPORTED_MODULE_2__produto_produto__["a" /* ProdutoPage */].nome = ev.currentTarget.innerText;
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__produto_produto__["a" /* ProdutoPage */]);
     };
     InicioPage.prototype.getItems = function (ev) {
         // Reset items back to all of the items
@@ -304,12 +307,12 @@ var InicioPage = /** @class */ (function () {
             params = {};
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__boleto_boleto__["a" /* BoletoPage */]);
     };
-    var InicioPage_1;
+    var InicioPage_1, _a;
     InicioPage = InicioPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-inicio',template:/*ion-inline-start:"/home/felipe/Desktop/appPetShop/src/pages/inicio/inicio.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Inicio\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page2">\n  \n  <img src="assets/img/Pi672XjRcuQYSxGVYuWF_petshop.jpg" style="display:block;width:30%;height:auto;margin-left:auto;margin-right:auto;" />\n  <form id="inicio-form5">\n    <ion-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel" type="text" debounce="500" placeholder="Pesquisar" (ionChange)="getItems($event)"></ion-searchbar>\n    <ion-list *ngIf="isItemAvailable">\n      <ion-item *ngFor="let item of items" on-click="itemClick($event)">{{ item }}</ion-item>\n    </ion-list>\n  </form>\n  <ion-card id="inicio-card" style="width: 90%;">\n    <div class="spacer" style="width:300px;height:30px;" id="cadastrar-spacer4"></div>\n    <div id="inicio-heading10" style="color:#000000;text-align: center;font-size: large;font-style: unset;">\n      Produtos\n    </div>\n    <div class="spacer" style="width:300px;height:30px;" id="cadastrar-spacer4"></div>\n    <ion-list>\n      <div id="carrinho-container1" style="overflow-y: auto;height: 200px;">\n        <ion-list id="carrinho-list1" *ngFor="let prod of listInicio; let i=index" style="height: min-content;">\n          <ion-item-sliding>\n            <ion-item color="none" on-click="goToProduto($event)" id="{{prod.id}}" >\n              <ion-avatar item-left>\n                <img src={{prod.image}}/>\n              </ion-avatar>\n              <h2>\n                {{prod.name}}\n              </h2>\n            </ion-item>\n            <ion-item-options side="left">\n              <button ion-button color="light"></button>\n            </ion-item-options>\n          </ion-item-sliding>\n        </ion-list>\n      </div>\n    </ion-list>\n  </ion-card>\n  <ion-card id="inicio-card">\n    <div class="spacer" style="width:300px;height:30px;" id="cadastrar-spacer4"></div>\n    <ion-list>\n      <div id="inicio-heading10" style="color:#000000;text-align: center;font-size: large;font-style: unset;">\n        Sobre nós\n      </div>\n      <div class="spacer" style="width:300px;height:30px;" id="cadastrar-spacer4"></div>\n      <div id="inicio-markdown21" class="show-list-numbers-and-dots">\n        <p style="color:#000000;">\n          {{sobre}}\n        </p>\n      </div>\n      <img src="assets/img/jKWqyoBEQrarD9AgcljT_loja.jpg" />\n    </ion-list>\n  </ion-card>\n  <ion-card id="inicio-card">\n    <ion-list>\n      <div class="spacer" style="width:300px;height:30px;" id="cadastrar-spacer4"></div>\n      <div id="inicio-heading10" style="color:#000000;text-align: center;font-size: large;font-style: unset;">\n        Localização\n      </div>\n    <div class="spacer" style="width:300px;height:30px;" id="cadastrar-spacer4"></div>\n      <div id="inicio-markdown20" class="show-list-numbers-and-dots">\n        <p style="color:#000000;">\n          Contamos com diversos filiados em diversas regiões do País, ache a mais perto de você.\n        </p>\n        <ul *ngFor="let loc of listLoc; let i=index">\n          <li>\n            {{loc}}\n          </li>\n        </ul>\n      </div>\n      <div class="spacer" style="width:300px;height:31px;" id="inicio-spacer25"></div>\n      <img src="assets/img/ZCVg3vLTaqHMJsV4IIRV_maps.jpg" onclick="this.onMapClick"/>\n      <div class="spacer" style="width:300px;height:42px;" id="inicio-spacer26"></div>\n    </ion-list>\n  </ion-card>\n  <div class="spacer" style="height:100px;" id="inicio-spacer28"></div>\n  <div class="spacer" style="height:100px;" id="inicio-spacer27"></div>\n</ion-content>'/*ion-inline-end:"/home/felipe/Desktop/appPetShop/src/pages/inicio/inicio.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" ? _a : Object])
     ], InicioPage);
     return InicioPage;
 }());
@@ -1440,6 +1443,17 @@ var DataBase = /** @class */ (function () {
         for (var prodTitle in this.db["produtos"]) {
             for (var id in this.db["produtos"][prodTitle]) {
                 result.push(this.db["produtos"][prodTitle][id].nome);
+            }
+        }
+        return result;
+    };
+    DataBase.getId = function (nome) {
+        var result = "";
+        for (var prodTitle in this.db["produtos"]) {
+            for (var id in this.db["produtos"][prodTitle]) {
+                if (this.db["produtos"][prodTitle][id].nome == nome) {
+                    result = id;
+                }
             }
         }
         return result;

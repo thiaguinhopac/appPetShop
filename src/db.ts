@@ -112,6 +112,18 @@ export class DataBase {
     return result;
   }
 
+  static getId(nome: string){
+    let result = "";
+    for(let prodTitle in this.db["produtos"]){
+      for(let id in this.db["produtos"][prodTitle]){
+        if(this.db["produtos"][prodTitle][id].nome == nome){
+          result = id;
+        }
+      }
+    }
+    return result;
+  }
+
   static adicionarCartao(nome: string, numero: string,validade: string,ccv: string){
 
   }

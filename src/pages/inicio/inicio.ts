@@ -53,9 +53,10 @@ export class InicioPage {
   }
 
   itemClick(ev: any){
-
-
-
+    
+    ProdutoPage.id = DataBase.getId(ev.currentTarget.innerText);
+    ProdutoPage.nome = ev.currentTarget.innerText;
+    this.navCtrl.push(ProdutoPage);
   }
 
   getItems(ev: any) {
