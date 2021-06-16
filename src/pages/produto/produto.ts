@@ -18,17 +18,23 @@ export class ProdutoPage {
 
 
   nomeDoProduto: string;
-  preco: string;
   descricao: string;
+  valorDoProduto: string;
+  urlImage: string;
 
   static id = "";
+  static nome = "";
 
   constructor(public navCtrl: NavController) {
     this.init();
   }
 
   init(){
-    var aux = DataBase.detalharProduto(this.nomeDoProduto);
+    var aux = DataBase.detalharProduto(ProdutoPage.nome, ProdutoPage.id);
+    this.nomeDoProduto = aux.nome;
+    this.valorDoProduto = aux.preco;
+    this.urlImage = aux.urlImage;
+    this.descricao = aux.descricao;
   }
 
   goToCarrinho(params){
@@ -36,7 +42,7 @@ export class ProdutoPage {
     this.navCtrl.push(CarrinhoPage);
   }goToProduto(params){
     if (!params) params = {};
-    DataBase.detalharProduto(this.nomeDoProduto);
+    //DataBase.detalharProduto(this.nomeDoProduto);
     this.navCtrl.push(ProdutoPage);
   }goToPagamento(params){
     if (!params) params = {};

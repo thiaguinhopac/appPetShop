@@ -120,8 +120,14 @@ export class DataBase {
 
   }
   
-  static detalharProduto(name:string){
-    return
+  static detalharProduto(name:string, id: string){
+    let res = {};
+    for (let mc in this.db['produtos']){
+      if(this.db['produtos'][mc][id].nome == name){
+        res = this.db['produtos'][mc][id];
+      }
+    }
+    return res;
   }
 
   static getAbout(){

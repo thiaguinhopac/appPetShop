@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ProdutoPage } from '../produto/produto';
@@ -7,7 +8,6 @@ import { CartOPage } from '../cart-o/cart-o';
 import { FinalizarPage } from '../finalizar/finalizar';
 import { BoletoPage } from '../boleto/boleto';
 import { DataBase } from '../../db';
-
 
 @Component({
   selector: 'page-inicio',
@@ -22,6 +22,7 @@ export class InicioPage {
   sobre : String;
   listLoc = DataBase.getLocals();
   isItemAvailable = false;
+  id = [];
   items = [];
 
   constructor(public navCtrl: NavController) {
@@ -36,23 +37,24 @@ export class InicioPage {
   }
 
   ngOnInit() {
-
     let aux = DataBase.listarProdutos();
     console.log(aux);
     for(let name in aux){
       for(let element in aux[name]) {
         let ful = aux[name][element];
-        this.listInicio.push({name:ful.nome, image: ful.urlImage});
+        this.listInicio.push({name:ful.nome, image: ful.urlImage, id: element});
      }
     }
 
     let aux1 = DataBase.getAbout();
     this.sobre = aux1.desc;
+
+
   }
 
   itemClick(ev: any){
 
-    
+
 
   }
 
@@ -75,8 +77,8 @@ export class InicioPage {
   }
 
   goToProduto(params){
-    if (!params) params = {};
-    ProdutoPage.id = params[0];
+    ProdutoPage.id = params.currentTarget.id;
+    ProdutoPage.nome = params.currentTarget.innerText;
     this.navCtrl.push(ProdutoPage);
   }goToCarrinho(params){
     if (!params) params = {};

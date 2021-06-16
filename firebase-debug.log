@@ -1,0 +1,94 @@
+[debug] [2021-06-15T20:45:03.940Z] ----------------------------------------------------------------------
+[debug] [2021-06-15T20:45:03.943Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2021-06-15T20:45:03.943Z] CLI Version:   9.3.0
+[debug] [2021-06-15T20:45:03.943Z] Platform:      linux
+[debug] [2021-06-15T20:45:03.943Z] Node Version:  v10.21.0
+[debug] [2021-06-15T20:45:03.944Z] Time:          Tue Jun 15 2021 17:45:03 GMT-0300 (Brasilia Standard Time)
+[debug] [2021-06-15T20:45:03.944Z] ----------------------------------------------------------------------
+[debug] [2021-06-15T20:45:03.944Z] 
+[debug] [2021-06-15T20:45:03.952Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-15T20:45:03.952Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/felipe/Desktop/appPetShop
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using apppetshop-b7d09. 
+[debug] [2021-06-15T20:45:19.936Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/apppetshop-b7d09 [none]
+[debug] [2021-06-15T20:45:20.593Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/apppetshop-b7d09 403
+[debug] [2021-06-15T20:45:20.594Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/apppetshop-b7d09 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2021-06-15T20:45:20.595Z] HTTP Error: 403, The caller does not have permission
+[debug] [2021-06-15T20:45:20.803Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Client.doRequest (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:227:23)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[error] 
+[error] Error: Failed to get Firebase project apppetshop-b7d09. Please make sure the project exists and your account has permission to access it.
+[debug] [2021-06-15T20:49:12.103Z] ----------------------------------------------------------------------
+[debug] [2021-06-15T20:49:12.106Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2021-06-15T20:49:12.106Z] CLI Version:   9.3.0
+[debug] [2021-06-15T20:49:12.106Z] Platform:      linux
+[debug] [2021-06-15T20:49:12.106Z] Node Version:  v10.21.0
+[debug] [2021-06-15T20:49:12.107Z] Time:          Tue Jun 15 2021 17:49:12 GMT-0300 (Brasilia Standard Time)
+[debug] [2021-06-15T20:49:12.107Z] ----------------------------------------------------------------------
+[debug] [2021-06-15T20:49:12.107Z] 
+[debug] [2021-06-15T20:49:12.109Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-06-15T20:49:12.126Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-15T20:49:12.127Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/felipe/Desktop/appPetShop
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing in an existing Firebase project directory
+
+[debug] [2021-06-15T20:49:12.721Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-06-15T20:49:12.722Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using apppetshop-b7d09. 
+[debug] [2021-06-15T20:49:18.437Z] > refreshing access token with scopes: []
+[debug] [2021-06-15T20:49:18.438Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-15T20:49:18.648Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Tue, 15 Jun 2021 20:49:44 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-15T20:49:18.656Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/apppetshop-b7d09 [none]
+[debug] [2021-06-15T20:49:19.802Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/apppetshop-b7d09 403
+[debug] [2021-06-15T20:49:19.802Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/apppetshop-b7d09 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2021-06-15T20:49:19.803Z] HTTP Error: 403, The caller does not have permission
+[debug] [2021-06-15T20:49:19.997Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Client.doRequest (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:227:23)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[error] 
+[error] Error: Failed to get Firebase project apppetshop-b7d09. Please make sure the project exists and your account has permission to access it.

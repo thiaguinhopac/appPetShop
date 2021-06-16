@@ -6,7 +6,6 @@ import { InicioPage } from '../pages/inicio/inicio';
 import { CarrinhoPage } from '../pages/carrinho/carrinho';
 import { ConfiguraEsPage } from '../pages/configura-es/configura-es';
 import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
-import { PagePage } from '../pages/page/page';
 import { LoginPage } from '../pages/login/login';
 import { CadastrarPage } from '../pages/cadastrar/cadastrar';
 import { ProdutoPage } from '../pages/produto/produto';
@@ -15,7 +14,6 @@ import { CartOPage } from '../pages/cart-o/cart-o';
 import { FinalizarPage } from '../pages/finalizar/finalizar';
 import { BoletoPage } from '../pages/boleto/boleto';
 import { AdicionarCartOPage } from '../pages/adicionar-cart-o/adicionar-cart-o';
-import { PesquisarPage } from '../pages/pesquisar/pesquisar';
 import { ContaPage } from '../pages/conta/conta';
 
 
@@ -31,7 +29,6 @@ import { ServicesFirebaseProvider } from '../providers/services-firebase/service
     CarrinhoPage,
     ConfiguraEsPage,
     TabsControllerPage,
-    PagePage,
     LoginPage,
     CadastrarPage,
     ProdutoPage,
@@ -40,7 +37,6 @@ import { ServicesFirebaseProvider } from '../providers/services-firebase/service
     FinalizarPage,
     BoletoPage,
     AdicionarCartOPage,
-    PesquisarPage,
     ContaPage
   ],
   imports: [
@@ -54,7 +50,6 @@ import { ServicesFirebaseProvider } from '../providers/services-firebase/service
     CarrinhoPage,
     ConfiguraEsPage,
     TabsControllerPage,
-    PagePage,
     LoginPage,
     CadastrarPage,
     ProdutoPage,
@@ -63,7 +58,6 @@ import { ServicesFirebaseProvider } from '../providers/services-firebase/service
     FinalizarPage,
     BoletoPage,
     AdicionarCartOPage,
-    PesquisarPage,
     ContaPage
   ],
   providers: [

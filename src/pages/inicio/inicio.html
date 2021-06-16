@@ -24,7 +24,7 @@
       <div id="carrinho-container1" style="overflow-y: auto;height: 200px;">
         <ion-list id="carrinho-list1" *ngFor="let prod of listInicio; let i=index" style="height: min-content;">
           <ion-item-sliding>
-            <ion-item color="none" on-click="goToProduto()" id="carrinho-list-item7" >
+            <ion-item color="none" on-click="goToProduto($event)" id="{{prod.id}}" >
               <ion-avatar item-left>
                 <img src={{prod.image}}/>
               </ion-avatar>
