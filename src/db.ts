@@ -102,8 +102,7 @@ export class DataBase {
     for(let id in this.db.produtos){
       for(let nm in this.db.produtos[id]){
           if(this.db.produtos[id][nm].nome == nome){
-            this.db.carrinho.produtos[id][nm].id = nm;
-            this.db.carrinho.produtos[id][nm].qtd = 1;
+            this.db.carrinho.produtos[id][nm]; 
           }
       }
     }
