@@ -7,6 +7,7 @@ import { FinalizarPage } from '../finalizar/finalizar';
 import { InicioPage } from '../inicio/inicio';
 import { BoletoPage } from '../boleto/boleto';
 import { DataBase } from '../../db';
+import { TabsControllerPage } from '../tabs-controller/tabs-controller';
 
 @Component({
   selector: 'page-produto',
@@ -39,8 +40,10 @@ export class ProdutoPage {
 
   goToCarrinho(params){
     if (!params) params = {};
-    //DataBase.adicionarCarrinho(this.nomeDoProduto)
-    this.navCtrl.push(CarrinhoPage);
+    DataBase.adicionarCarrinho(this.nomeDoProduto);
+    DataBase.saveDb();
+    new CarrinhoPage(this.navCtrl).ngOnInit();
+    this.navCtrl.setRoot(CarrinhoPage);
   }goToProduto(params){
     if (!params) params = {};
     //DataBase.detalharProduto(this.nomeDoProduto);

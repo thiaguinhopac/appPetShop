@@ -10,8 +10,8 @@
   <h4>Produtos</h4>
   <div id="carrinho-container1" style="overflow-y: auto;height: 50%;">
     <ion-list id="carrinho-list1" name="listCarrinho" *ngFor="let prod of listCarrinho; let i=index" style="height: min-content;">
-      <ion-item-sliding>
-        <ion-item color="none" on-click="goToProduto()" id="carrinho-list-item7" >
+      <ion-item style="border: 1px solid black;">
+        <ion-item color="none" id="carrinho-list-item7" >
           <ion-avatar item-left>
             <img src={{prod.image}}/>
           </ion-avatar>
@@ -19,14 +19,15 @@
             {{prod.name}}
           </h2>
           <h3 style="text-align:center;">R$ {{prod.preco}}</h3>
-          <ion-icon name="remove-circle-outline"></ion-icon>
+          <ion-item side="rigth">
+            <ion-row align-items-center>
+              <ion-icon name="add"  on-click="addItem($event)"></ion-icon>
+              <input style="text-align:center;width: 40px;" id={{prod.name}} type="number" value={{prod.qtd}} min="0">
+              <ion-icon id="{{prod.name}}" name="remove" on-click="removeItem($event)"></ion-icon>
+            </ion-row>
+          </ion-item>
         </ion-item>
-        <ion-item-options side="left">
-          <button ion-button color="light" on-click="addItem($event)"></button>
-          <h3 style="text-align:center;">{{prod.qtd}}</h3>
-          <button ion-button color="light" on-click="removeItem($event)"></button>
-        </ion-item-options>
-      </ion-item-sliding>
+      </ion-item>
     </ion-list>
   </div>
   <div class="spacer" style="width:300px;height:16px;" id="carrinho-spacer9"></div>

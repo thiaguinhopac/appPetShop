@@ -15,7 +15,7 @@ import { FinalizarPage } from '../pages/finalizar/finalizar';
 import { BoletoPage } from '../pages/boleto/boleto';
 import { AdicionarCartOPage } from '../pages/adicionar-cart-o/adicionar-cart-o';
 import { ContaPage } from '../pages/conta/conta';
-
+import { IonicStorageModule } from '@ionic/storage';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -42,6 +42,7 @@ import { ServicesFirebaseProvider } from '../providers/services-firebase/service
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -64,7 +65,7 @@ import { ServicesFirebaseProvider } from '../providers/services-firebase/service
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ServicesFirebaseProvider
+    ServicesFirebaseProvider,
   ]
 })
 export class AppModule {}

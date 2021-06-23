@@ -30,24 +30,32 @@ export class CarrinhoPage implements OnInit {
   }
 
   ngOnInit() {
+    this.listItens();
+  }
+
+  listItens(){
     this.urlImage = DataBase.getIconCart();
     let aux = DataBase.listarCarrinho();
-    let preco = parseFloat(this.totalValor) > 0 ? parseFloat(this.totalValor) : 0.0;
-  
+    let preco = 0.0;
+    this.listCarrinho = [];
     aux.forEach(element=>{
-      this.listCarrinho.push({name: element.prod.nome, image: element.prod.urlImage, preco: element.prod.preco, qtd: element['qtd']});
-      preco += parseFloat(element.prod.preco);
-    })
-  
+      if(element.prod != undefined){
+        this.listCarrinho.push({name: element.prod.nome, image: element.prod.urlImage, preco: element.prod.preco, qtd: element['qtd']});
+        preco += parseFloat(element.prod.preco) * (Math.round(parseInt(element['qtd'])*100)/100);
+      }
+    });
     this.totalValor =  (Math.round(preco*100)/100).toString();
+    
   }
 
   removeItem(ev: any){
-
+    DataBase.removeQtdCarrinho(ev.currentTarget.id);
+    this.listItens();
   }
 
   addItem(ev: any){
-    
+    DataBase.addQtdCarrinho(ev.srcElement.nextElementSibling.id);
+    this.listItens();
   }
 
   goToProduto(params){
